@@ -1,0 +1,935 @@
+[
+  {
+    "shortName": "Alpine",
+    "councilName": "Alpine Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Ararat",
+    "councilName": "Ararat Rural City Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Ballarat",
+    "councilName": "Ballarat City Council",
+    "wardNames": [
+      "Alfredton",
+      "Delacombe",
+      "Sebastopol",
+      "Central",
+      "Wendouree",
+      "Golden Point",
+      "North",
+      "Brown Hill",
+      "Buninyong"
+    ]
+  },
+  {
+    "shortName": "Banyule",
+    "councilName": "Banyule City Council",
+    "wardNames": [
+      "Ibbott",
+      "Sherbourne",
+      "Chelsworth",
+      "Grimshaw",
+      "Olympia",
+      "Hawdon",
+      "Beale",
+      "Griffin",
+      "Bakewell"
+    ]
+  },
+  {
+    "shortName": "Bass Coast",
+    "councilName": "Bass Coast Shire Council",
+    "wardNames": [
+      "Bunurong",
+      "Island",
+      "Western Port"
+    ]
+  },
+  {
+    "shortName": "Baw Baw",
+    "councilName": "Baw Baw Shire Council",
+    "wardNames": [
+      "Central",
+      "East",
+      "West"
+    ]
+  },
+  {
+    "shortName": "Bayside",
+    "councilName": "Bayside City Council",
+    "wardNames": [
+      "Dendy",
+      "Ivison",
+      "Boyd",
+      "Castlefield",
+      "Ebden",
+      "Beckett",
+      "Bleazby"
+    ]
+  },
+  {
+    "shortName": "Benalla",
+    "councilName": "Benalla Rural City Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Boroondara",
+    "councilName": "Boroondara City Council",
+    "wardNames": [
+      "Maling",
+      "Riversdale",
+      "Studley",
+      "Lynden",
+      "Junction",
+      "Solway",
+      "Gardiner",
+      "Cotham",
+      "Maranoa",
+      "Bellevue",
+      "Glenferrie"
+    ]
+  },
+  {
+    "shortName": "Brimbank",
+    "councilName": "Brimbank City Council",
+    "wardNames": [
+      "Harvester",
+      "St Albans East",
+      "Delahey",
+      "Organ Pipes",
+      "Grasslands",
+      "Copernicus",
+      "Mount Derrimut",
+      "Horseshoe Bend",
+      "Albanvale",
+      "Kororoit Creek",
+      "Cherry Creek"
+    ]
+  },
+  {
+    "shortName": "Buloke",
+    "councilName": "Buloke Shire Council",
+    "wardNames": [
+      "Mallee",
+      "Lower Avoca",
+      "Mount Jeffcott"
+    ]
+  },
+  {
+    "shortName": "Campaspe",
+    "councilName": "Campaspe Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Cardinia",
+    "councilName": "Cardinia Shire Council",
+    "wardNames": [
+      "Bunyip",
+      "Beacon Hills",
+      "Pakenham Hills",
+      "Toomuc",
+      "Henty",
+      "Westernport",
+      "Central",
+      "Officer",
+      "Ranges"
+    ]
+  },
+  {
+    "shortName": "Casey",
+    "councilName": "Casey City Council",
+    "wardNames": [
+      "Waratah",
+      "Cranbourne Gardens",
+      "Akoonah",
+      "Casuarina",
+      "River Gum",
+      "Kowan",
+      "Dillwynia",
+      "Kalora",
+      "Correa",
+      "Grevillea",
+      "Tooradin",
+      "Quarters"
+    ]
+  },
+  {
+    "shortName": "Central Goldfields",
+    "councilName": "Central Goldfields Shire Council",
+    "wardNames": [
+      "Tullaroop",
+      "Maryborough North",
+      "Maryborough East",
+      "Flynn",
+      "Maryborough West",
+      "Maryborough Central",
+      "Paddys Ranges"
+    ]
+  },
+  {
+    "shortName": "Colac Otway",
+    "councilName": "Colac Otway Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Corangamite",
+    "councilName": "Corangamite Shire Council",
+    "wardNames": [
+      "Lake Elingamite",
+      "Mt Elephant",
+      "Lake Keilambete",
+      "Tandarook",
+      "Leura",
+      "Gnotuk",
+      "Cooriemungle"
+    ]
+  },
+  {
+    "shortName": "Darebin",
+    "councilName": "Darebin City Council",
+    "wardNames": [
+      "South",
+      "North West",
+      "North Central",
+      "West",
+      "South West",
+      "North East",
+      "South Central",
+      "South East",
+      "Central"
+    ]
+  },
+  {
+    "shortName": "East Gippsland",
+    "councilName": "East Gippsland Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Frankston",
+    "councilName": "Frankston City Council",
+    "wardNames": [
+      "Centenary Park",
+      "Pines",
+      "Wilton",
+      "Ballam",
+      "Lyrebird",
+      "Kananook",
+      "Elisabeth Murdoch",
+      "Yamala",
+      "Derinya"
+    ]
+  },
+  {
+    "shortName": "Gannawarra",
+    "councilName": "Gannawarra Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Glen Eira",
+    "councilName": "Glen Eira City Council",
+    "wardNames": [
+      "Moorleigh",
+      "Bambra",
+      "Murrumbeena",
+      "Mallanbool",
+      "Booran",
+      "Wattle Grove",
+      "Orrong",
+      "Jasper",
+      "Caulfield Park"
+    ]
+  },
+  {
+    "shortName": "Glenelg",
+    "councilName": "Glenelg Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Golden Plains",
+    "councilName": "Golden Plains Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Greater Bendigo",
+    "councilName": "Greater Bendigo City Council",
+    "wardNames": [
+      "Golden Square",
+      "Eppalock",
+      "Ravenswood",
+      "Lake Weeroona",
+      "Epsom",
+      "Kennington",
+      "Lockwood",
+      "Axedale",
+      "Whipstick"
+    ]
+  },
+  {
+    "shortName": "Greater Dandenong",
+    "councilName": "Greater Dandenong City Council",
+    "wardNames": [
+      "Dandenong",
+      "Springvale Central",
+      "Noble Park",
+      "Springvale North",
+      "Yarraman",
+      "Cleeland",
+      "Keysborough",
+      "Noble Park North",
+      "Keysborough South",
+      "Dandenong North",
+      "Springvale South"
+    ]
+  },
+  {
+    "shortName": "Greater Geelong",
+    "councilName": "Greater Geelong City Council",
+    "wardNames": [
+      "Kardinia",
+      "You Yangs",
+      "Cheetham",
+      "Connewarre",
+      "Murradoc",
+      "Charlemont",
+      "Leopold",
+      "Barrabool Hills",
+      "Deakin",
+      "Corio",
+      "Hamlyn Heights"
+    ]
+  },
+  {
+    "shortName": "Greater Shepparton",
+    "councilName": "Greater Shepparton City Council",
+    "wardNames": [
+      "Midland",
+      "Goulburn River",
+      "Yanha Gurtji",
+      "Poplar",
+      "Kialla",
+      "Pine Lodge",
+      "Lower Goulburn",
+      "McEwen",
+      "Balaclava"
+    ]
+  },
+  {
+    "shortName": "Hepburn",
+    "councilName": "Hepburn Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Hindmarsh",
+    "councilName": "Hindmarsh Shire Council",
+    "wardNames": [
+      "North",
+      "East",
+      "West"
+    ]
+  },
+  {
+    "shortName": "Hobsons Bay",
+    "councilName": "Hobsons Bay City Council",
+    "wardNames": [
+      "Laverton",
+      "Altona North",
+      "Williamstown North",
+      "Williamstown",
+      "Altona Meadows",
+      "Altona",
+      "Spotswood"
+    ]
+  },
+  {
+    "shortName": "Horsham",
+    "councilName": "Horsham Rural City Council",
+    "wardNames": [
+      "Horsham North",
+      "Pine Lake",
+      "Green Park",
+      "Kalimna",
+      "Wyn Wyn",
+      "May Park",
+      "Oatlands"
+    ]
+  },
+  {
+    "shortName": "Hume",
+    "councilName": "Hume City Council",
+    "wardNames": [
+      "Burt-kur-min",
+      "Roxburgh Park",
+      "Emu Creek",
+      "Woodlands",
+      "Tullamarine",
+      "Bababi Marning",
+      "Mount Ridley",
+      "Merlynston Creek",
+      "Yubup",
+      "Aitken",
+      "Jacksons Hill"
+    ]
+  },
+  {
+    "shortName": "Indigo",
+    "councilName": "Indigo Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Kingston",
+    "councilName": "Kingston City Council",
+    "wardNames": [
+      "Wattle",
+      "Sandpiper",
+      "Yammerbook",
+      "Como",
+      "Banksia",
+      "Karkarook",
+      "Bunjil",
+      "Caruana",
+      "Longbeach",
+      "Melaleuca",
+      "Chicquita"
+    ]
+  },
+  {
+    "shortName": "Knox",
+    "councilName": "Knox City Council",
+    "wardNames": [
+      "Chandler",
+      "Dinsdale",
+      "Collier",
+      "Dobson",
+      "Taylor",
+      "Scott",
+      "Baird",
+      "Tirhatuan",
+      "Friberg"
+    ]
+  },
+  {
+    "shortName": "Latrobe",
+    "councilName": "Latrobe City Council",
+    "wardNames": [
+      "Jeeralang",
+      "Morwell River",
+      "Newborough",
+      "Budgeree",
+      "Yallourn",
+      "Loy Yang",
+      "Moe",
+      "Boola Boola",
+      "Tyers"
+    ]
+  },
+  {
+    "shortName": "Loddon",
+    "councilName": "Loddon Shire Council",
+    "wardNames": [
+      "Terrick",
+      "Tarnagulla",
+      "Inglewood",
+      "Wedderburn",
+      "Boort"
+    ]
+  },
+  {
+    "shortName": "Macedon Ranges",
+    "councilName": "Macedon Ranges Shire Council",
+    "wardNames": [
+      "West",
+      "East",
+      "South"
+    ]
+  },
+  {
+    "shortName": "Manningham",
+    "councilName": "Manningham City Council",
+    "wardNames": [
+      "Schramm",
+      "Bolin",
+      "Tullamore",
+      "Manna",
+      "Yarra",
+      "Waldau",
+      "Ruffey",
+      "Westerfolds",
+      "Currawong"
+    ]
+  },
+  {
+    "shortName": "Mansfield",
+    "councilName": "Mansfield Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Maribyrnong",
+    "councilName": "Maribyrnong City Council",
+    "wardNames": [
+      "Braybrook",
+      "Wattle",
+      "River",
+      "Sheoak",
+      "Burndap",
+      "Saltwater",
+      "Bluestone"
+    ]
+  },
+  {
+    "shortName": "Maroondah",
+    "councilName": "Maroondah City Council",
+    "wardNames": [
+      "Yarrunga",
+      "Barngeong",
+      "McAlpin",
+      "Tarralla",
+      "Wonga",
+      "Wicklow",
+      "Jubilee",
+      "Wombolano",
+      "Bungalook"
+    ]
+  },
+  {
+    "shortName": "Melbourne",
+    "councilName": "Melbourne City Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Melton",
+    "councilName": "Melton City Council",
+    "wardNames": [
+      "Jackwood",
+      "Watts",
+      "Mount Atkinson",
+      "Hilltop",
+      "Cambrian",
+      "Sugar Gum",
+      "Coolibah",
+      "Bullum Bullum",
+      "Lake Caroline",
+      "Stringybark"
+    ]
+  },
+  {
+    "shortName": "Merri-bek",
+    "councilName": "Merri-bek City Council",
+    "wardNames": [
+      "Harmony Park",
+      "Westbreen",
+      "Randazzo",
+      "Pascoe Vale South",
+      "Warrk-Warrk",
+      "Box Forest",
+      "Pentridge",
+      "Bulleke-bek",
+      "Brunswick West",
+      "Bababi Djinanang",
+      "Djirri-Djirri"
+    ]
+  },
+  {
+    "shortName": "Mildura",
+    "councilName": "Mildura Rural City Council",
+    "wardNames": [
+      "Millewa",
+      "Henderson Park",
+      "Lake Ranfurly",
+      "City Gate",
+      "Karadoc",
+      "Nowingi Place",
+      "Kings Billabong",
+      "Mildura Wetlands",
+      "Sunset Country"
+    ]
+  },
+  {
+    "shortName": "Mitchell",
+    "councilName": "Mitchell Shire Council",
+    "wardNames": [
+      "South",
+      "Central",
+      "North"
+    ]
+  },
+  {
+    "shortName": "Moira",
+    "councilName": "Moira Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Monash",
+    "councilName": "Monash City Council",
+    "wardNames": [
+      "Gardiners Creek",
+      "Banksia",
+      "Jells",
+      "Blackburn",
+      "Waverley Park",
+      "Gallaghers",
+      "Mayfield",
+      "Warrigal",
+      "University",
+      "Scotchmans Creek",
+      "Wellington"
+    ]
+  },
+  {
+    "shortName": "Moonee Valley",
+    "councilName": "Moonee Valley City Council",
+    "wardNames": [
+      "Steele Creek",
+      "Fairbairn",
+      "Canning",
+      "Woodlands",
+      "Queens Park",
+      "Airport",
+      "Myrnong",
+      "Buckley",
+      "Milleara"
+    ]
+  },
+  {
+    "shortName": "Moorabool",
+    "councilName": "Moorabool Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Mornington Peninsula",
+    "councilName": "Mornington Peninsula Shire Council",
+    "wardNames": [
+      "Briars",
+      "Brokil",
+      "Coolart",
+      "Tootgarook",
+      "Nepean",
+      "Tanti",
+      "Beek Beek",
+      "Warringine",
+      "Kackeraboite",
+      "Benbenjie",
+      "Moorooduc"
+    ]
+  },
+  {
+    "shortName": "Mount Alexander",
+    "councilName": "Mount Alexander Shire Council",
+    "wardNames": [
+      "Campbells Creek",
+      "Calder",
+      "Barkers Creek",
+      "Forest Creek",
+      "Tarrengower",
+      "Loddon River",
+      "Coliban",
+      "Moonlight Creek"
+    ]
+  },
+  {
+    "shortName": "Moyne",
+    "councilName": "Moyne Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Murrindindi",
+    "councilName": "Murrindindi Shire Council",
+    "wardNames": [
+      "Kinglake",
+      "Eildon",
+      "Red Gate",
+      "Cathedral",
+      "Koriella",
+      "Cheviot",
+      "King Parrot"
+    ]
+  },
+  {
+    "shortName": "Nillumbik",
+    "councilName": "Nillumbik Shire Council",
+    "wardNames": [
+      "Wingrove",
+      "Blue Lake",
+      "Swipers Gully",
+      "Sugarloaf",
+      "Edendale",
+      "Ellis",
+      "Bunjil"
+    ]
+  },
+  {
+    "shortName": "Northern Grampians",
+    "councilName": "Northern Grampians Shire Council",
+    "wardNames": [
+      "Kara Kara",
+      "Grampians",
+      "Central"
+    ]
+  },
+  {
+    "shortName": "Port Phillip",
+    "councilName": "Port Phillip City Council",
+    "wardNames": [
+      "St Kilda",
+      "Alma",
+      "Port Melbourne",
+      "Elwood",
+      "Lakeside",
+      "Montague",
+      "Balaclava",
+      "South Melbourne",
+      "Albert Park"
+    ]
+  },
+  {
+    "shortName": "Pyrenees",
+    "councilName": "Pyrenees Shire Council",
+    "wardNames": [
+      "Avoca",
+      "Ercildoune",
+      "Mount Emu",
+      "De Cameron",
+      "Beaufort"
+    ]
+  },
+  {
+    "shortName": "South Gippsland",
+    "councilName": "South Gippsland Shire Council",
+    "wardNames": [
+      "Tarwin Valley",
+      "Coastal-Promontory",
+      "Strzelecki"
+    ]
+  },
+  {
+    "shortName": "Southern Grampians",
+    "councilName": "Southern Grampians Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Stonnington",
+    "councilName": "Stonnington City Council",
+    "wardNames": [
+      "Hedgeley Dene",
+      "Como",
+      "Malvern Valley",
+      "Orrong",
+      "Greville",
+      "Toorak",
+      "Tooronga",
+      "Wattletree",
+      "South Yarra"
+    ]
+  },
+  {
+    "shortName": "Strathbogie",
+    "councilName": "Strathbogie Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Surf Coast",
+    "councilName": "Surf Coast Shire Council",
+    "wardNames": [
+      "Otway Range",
+      "Torquay",
+      "Winchelsea"
+    ]
+  },
+  {
+    "shortName": "Swan Hill",
+    "councilName": "Swan Hill Rural City Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Towong",
+    "councilName": "Towong Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Wangaratta",
+    "councilName": "Wangaratta Rural City Council",
+    "wardNames": [
+      "Ovens",
+      "Yarrunga",
+      "Wareena",
+      "King River",
+      "Appin",
+      "Warby",
+      "Bullawah"
+    ]
+  },
+  {
+    "shortName": "Warrnambool",
+    "councilName": "Warrnambool City Council",
+    "wardNames": [
+      "Botanic",
+      "Hopkins River",
+      "Wollaston",
+      "Platypus Park",
+      "Pertobe",
+      "Russells Creek",
+      "Central"
+    ]
+  },
+  {
+    "shortName": "Wellington",
+    "councilName": "Wellington Shire Council",
+    "wardNames": [
+      "Northern",
+      "Central",
+      "Coastal"
+    ]
+  },
+  {
+    "shortName": "West Wimmera",
+    "councilName": "West Wimmera Shire Council",
+    "wardNames": [
+      "Unsubdivided"
+    ]
+  },
+  {
+    "shortName": "Whitehorse",
+    "councilName": "Whitehorse City Council",
+    "wardNames": [
+      "Cootamundra",
+      "Walker",
+      "Mahoneys",
+      "Sparks",
+      "Elgar",
+      "Terrara",
+      "Eley",
+      "Lake",
+      "Kingsley",
+      "Wattle",
+      "Simpson"
+    ]
+  },
+  {
+    "shortName": "Whittlesea",
+    "councilName": "Whittlesea City Council",
+    "wardNames": [
+      "Mill Park",
+      "South Morang",
+      "North",
+      "Kirrip",
+      "Epping",
+      "Ganbu Gulinj",
+      "Mernda",
+      "Bundoora",
+      "Lalor",
+      "Thomastown",
+      "Painted Hills"
+    ]
+  },
+  {
+    "shortName": "Wodonga",
+    "councilName": "Wodonga City Council",
+    "wardNames": [
+      "Sumsion Gardens",
+      "Baranduda Range",
+      "Huon Creek",
+      "Barnawartha North",
+      "Racecourse",
+      "Lake Hume",
+      "Marimba Park"
+    ]
+  },
+  {
+    "shortName": "Wyndham",
+    "councilName": "Wyndham City Council",
+    "wardNames": [
+      "Iramoo",
+      "Heathdale",
+      "Featherbrook",
+      "Cheetham",
+      "Werribee Park",
+      "Williams Landing",
+      "Grange",
+      "Wimba",
+      "Brinbeal",
+      "Bemin",
+      "Quandong"
+    ]
+  },
+  {
+    "shortName": "Yarra",
+    "councilName": "Yarra City Council",
+    "wardNames": [
+      "Yarra Bend",
+      "Lennox",
+      "Nicholls",
+      "Boulevard",
+      "Langridge",
+      "MacKillop",
+      "Melba",
+      "Curtain",
+      "Hoddle"
+    ]
+  },
+  {
+    "shortName": "Yarra Ranges",
+    "councilName": "Yarra Ranges Shire Council",
+    "wardNames": [
+      "Chirnside",
+      "Melba",
+      "Streeton",
+      "Chandler",
+      "O'Shannassy",
+      "Lyster",
+      "Billanook",
+      "Ryrie",
+      "Walling"
+    ]
+  },
+  {
+    "shortName": "Yarriambiack",
+    "councilName": "Yarriambiack Shire Council",
+    "wardNames": [
+      "Warracknabeal",
+      "Dunmunkle",
+      "Hopetoun"
+    ]
+  }
+]
