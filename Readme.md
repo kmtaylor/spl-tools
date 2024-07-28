@@ -20,4 +20,4 @@ This is a bash script for creating a page in WordPress for each council.
 
 If a page for a council already exists, the page will be updated instead. The source of councils for this script is the "council_names.json" file. 
 
-The script needs the `jq` and `wp` tools.
+The script needs the [`jq`](https://jqlang.github.io/jq/), [`gomplate'](https://docs.gomplate.ca/), and [`wp`](https://wp-cli.org/) tools.
