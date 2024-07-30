@@ -18,14 +18,20 @@ function create_or_update_page() {
 
   short_name=$(echo "$council_block" | jq -r '.shortName')
 
-  content=$(echo "$council_block" | jq -c | gomplate -d config=stdin:///in.json -f page-template)
+  content=$(echo "$council_block" | jq -c | php php-template/main.php)
 
-  if [[ -n "$page_id" ]]; then
-    echo "Update page $short_name (post $page_id)"
-    echo "$content" | wp post update "$page_id" --post_content="$content" $WP_FLAGS -
+  if [ $? -eq 0 ]; then
+
+    if [[ -n "$page_id" ]]; then
+      echo "Update page $short_name (post $page_id)"
+      echo "$content" | wp post update "$page_id" --post_content="$content" $WP_FLAGS -
+    else
+      echo "Create page $short_name"
+      echo "$content" | wp post create --post_type=page --post_title="$short_name" --post_status=publish $WP_FLAGS -
+    fi
+
   else
-    echo "Create page $short_name"
-    echo "$content" | wp post create --post_type=page --post_title="$short_name" --post_status=publish $WP_FLAGS -
+    echo "Failed to generate page content for $short_name"
   fi
 }
 
