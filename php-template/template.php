@@ -28,4 +28,5 @@
     <?php endfor; ?>
 
 </div>
+<!-- /wp:group -->
 <?php endforeach; ?>
