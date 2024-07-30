@@ -1,7 +1,7 @@
 <?php
 
 class SPLPageRenderer {
-    public function renderCouncilPage($config) {
+    public function renderCouncilPage($config, $candidates) {
         ob_start();
 
         set_error_handler(function($errno, $errstr, $errfile, $errline) {

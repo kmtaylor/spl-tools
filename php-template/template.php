@@ -6,14 +6,21 @@
 <!-- wp:heading {"className":"is-style-default"} -->
 <h2 class="wp-block-heading is-style-default" id="<?php echo strtolower(str_replace(' ', '-', $wardName)); ?>"><?php echo $wardName; ?></h2>
 <!-- /wp:heading -->
-        
+
+<?php
+$wardCandidates = array_filter($candidates, function ($candidate) use ($wardName) {
+    return isset($candidate["Ward"]) && $candidate["Ward"] === $wardName;
+});
+
+if (count($wardCandidates) == 0) continue;
+?>
 <!-- wp:group {"layout":{"type":"grid"}} -->
 <div class="wp-block-group">
-    <?php for ($i = 0; $i < 5; $i++): ?>
+    <?php foreach ($wardCandidates as $index => $candidate): ?>
     <!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
     <div class="wp-block-group">
         <!-- wp:heading {"fontSize":"medium"} -->
-        <h2 class="wp-block-heading has-medium-font-size">Candidate <?php echo $i + 1; ?></h2>
+        <h2 class="wp-block-heading has-medium-font-size"><?php echo $candidate['Candidate Name']; ?></h2>
         <!-- /wp:heading -->
 
         <!-- wp:image {"aspectRatio":"1","scale":"cover","style":{"color":{}}} -->
@@ -25,7 +32,7 @@
         <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->
-    <?php endfor; ?>
+    <?php endforeach; ?>
 
 </div>
 <!-- /wp:group -->
