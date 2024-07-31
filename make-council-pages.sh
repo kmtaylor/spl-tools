@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script uses the jq, wp, and gomplate commands, make sure they are installed before running this script.
+# This script uses the jq, wp, and php commands, make sure they are installed before running this script.
 
 # The council_names.json file must contain a list of objects (one for each council).
 # Each object must have the following fields: "shortName", "councilName", and "wardNames"
