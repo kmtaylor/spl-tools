@@ -14,7 +14,7 @@ $wardCandidates = array_filter($candidates, function ($candidate) use ($wardName
 
 if (count($wardCandidates) == 0) continue;
 ?>
-<!-- wp:group {"layout":{"type":"grid"}} -->
+<!-- wp:group {"layout":{"type":"grid","columnCount":3}} -->
 <div class="wp-block-group">
     <?php foreach ($wardCandidates as $index => $candidate): ?>
     <!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
