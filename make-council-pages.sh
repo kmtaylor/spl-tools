@@ -21,7 +21,7 @@ function create_or_update_page() {
 
   slug=$(echo "$council_block" | jq -r '.slug')
 
-  content=$(echo "$council_block" | jq -c | php php-template/main.php "php://stdin" "candidates/$slug.csv")
+  content=$(echo "$council_block" | jq -c | php php-template/main.php --council-file "php://stdin" --candidates-file "candidates/$slug.csv")
 
   if [ $? -eq 0 ]; then
 
