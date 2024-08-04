@@ -6,7 +6,7 @@ class SPLPageRenderer {
 
         set_error_handler(function($errno, $errstr, $errfile, $errline) {
             // Clear any output if an error occurred
-            ob_get_clean();
+            ob_clean();
             error_log("Error: $errstr in $errfile on line $errline");
             return true; // Prevent default error handling
         });
