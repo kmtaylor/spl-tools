@@ -42,6 +42,14 @@ if (($handle = fopen($candidatesFile, "r")) !== FALSE) {
     exit(1);
 }
 
+$candidateData = array_filter($candidateData, function ($candidate) use ($councilData) {
+    return isset($candidate["Council"]) && $candidate["Council"] === $councilData['shortName'];
+});
+
+if (empty($candidateData)) {
+    error_log("Failed to load any candidates for " . $councilData['shortName']);
+}
+
 $renderer = new SPLPageRenderer();
 $pageContent = $renderer->renderCouncilPage($councilData, $candidateData);
 if ($pageContent === null) {
