@@ -1,6 +1,7 @@
 [
   {
     "shortName": "Alpine",
+    "slug": "alpine",
     "councilName": "Alpine Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -8,6 +9,7 @@
   },
   {
     "shortName": "Ararat",
+    "slug": "ararat",
     "councilName": "Ararat Rural City Council",
     "wardNames": [
       "Unsubdivided"
@@ -15,6 +17,7 @@
   },
   {
     "shortName": "Ballarat",
+    "slug": "ballarat",
     "councilName": "Ballarat City Council",
     "wardNames": [
       "Alfredton",
@@ -30,6 +33,7 @@
   },
   {
     "shortName": "Banyule",
+    "slug": "banyule",
     "councilName": "Banyule City Council",
     "wardNames": [
       "Ibbott",
@@ -45,6 +49,7 @@
   },
   {
     "shortName": "Bass Coast",
+    "slug": "bass-coast",
     "councilName": "Bass Coast Shire Council",
     "wardNames": [
       "Bunurong",
@@ -54,6 +59,7 @@
   },
   {
     "shortName": "Baw Baw",
+    "slug": "baw-baw",
     "councilName": "Baw Baw Shire Council",
     "wardNames": [
       "Central",
@@ -63,6 +69,7 @@
   },
   {
     "shortName": "Bayside",
+    "slug": "bayside",
     "councilName": "Bayside City Council",
     "wardNames": [
       "Dendy",
@@ -76,6 +83,7 @@
   },
   {
     "shortName": "Benalla",
+    "slug": "benalla",
     "councilName": "Benalla Rural City Council",
     "wardNames": [
       "Unsubdivided"
@@ -83,6 +91,7 @@
   },
   {
     "shortName": "Boroondara",
+    "slug": "boroondara",
     "councilName": "Boroondara City Council",
     "wardNames": [
       "Maling",
@@ -100,6 +109,7 @@
   },
   {
     "shortName": "Brimbank",
+    "slug": "brimbank",
     "councilName": "Brimbank City Council",
     "wardNames": [
       "Harvester",
@@ -117,6 +127,7 @@
   },
   {
     "shortName": "Buloke",
+    "slug": "buloke",
     "councilName": "Buloke Shire Council",
     "wardNames": [
       "Mallee",
@@ -126,6 +137,7 @@
   },
   {
     "shortName": "Campaspe",
+    "slug": "campaspe",
     "councilName": "Campaspe Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -133,6 +145,7 @@
   },
   {
     "shortName": "Cardinia",
+    "slug": "cardinia",
     "councilName": "Cardinia Shire Council",
     "wardNames": [
       "Bunyip",
@@ -148,6 +161,7 @@
   },
   {
     "shortName": "Casey",
+    "slug": "casey",
     "councilName": "Casey City Council",
     "wardNames": [
       "Waratah",
@@ -166,6 +180,7 @@
   },
   {
     "shortName": "Central Goldfields",
+    "slug": "central-goldfields",
     "councilName": "Central Goldfields Shire Council",
     "wardNames": [
       "Tullaroop",
@@ -179,6 +194,7 @@
   },
   {
     "shortName": "Colac Otway",
+    "slug": "colac-otway",
     "councilName": "Colac Otway Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -186,6 +202,7 @@
   },
   {
     "shortName": "Corangamite",
+    "slug": "corangamite",
     "councilName": "Corangamite Shire Council",
     "wardNames": [
       "Lake Elingamite",
@@ -199,6 +216,7 @@
   },
   {
     "shortName": "Darebin",
+    "slug": "darebin",
     "councilName": "Darebin City Council",
     "wardNames": [
       "South",
@@ -214,6 +232,7 @@
   },
   {
     "shortName": "East Gippsland",
+    "slug": "east-gippsland",
     "councilName": "East Gippsland Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -221,6 +240,7 @@
   },
   {
     "shortName": "Frankston",
+    "slug": "frankston",
     "councilName": "Frankston City Council",
     "wardNames": [
       "Centenary Park",
@@ -236,6 +256,7 @@
   },
   {
     "shortName": "Gannawarra",
+    "slug": "gannawarra",
     "councilName": "Gannawarra Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -243,6 +264,7 @@
   },
   {
     "shortName": "Glen Eira",
+    "slug": "glen-eira",
     "councilName": "Glen Eira City Council",
     "wardNames": [
       "Moorleigh",
@@ -258,6 +280,7 @@
   },
   {
     "shortName": "Glenelg",
+    "slug": "glenelg",
     "councilName": "Glenelg Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -265,6 +288,7 @@
   },
   {
     "shortName": "Golden Plains",
+    "slug": "golden-plains",
     "councilName": "Golden Plains Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -272,6 +296,7 @@
   },
   {
     "shortName": "Greater Bendigo",
+    "slug": "greater-bendigo",
     "councilName": "Greater Bendigo City Council",
     "wardNames": [
       "Golden Square",
@@ -287,6 +312,7 @@
   },
   {
     "shortName": "Greater Dandenong",
+    "slug": "greater-dandenong",
     "councilName": "Greater Dandenong City Council",
     "wardNames": [
       "Dandenong",
@@ -304,6 +330,7 @@
   },
   {
     "shortName": "Greater Geelong",
+    "slug": "greater-geelong",
     "councilName": "Greater Geelong City Council",
     "wardNames": [
       "Kardinia",
@@ -321,6 +348,7 @@
   },
   {
     "shortName": "Greater Shepparton",
+    "slug": "greater-shepparton",
     "councilName": "Greater Shepparton City Council",
     "wardNames": [
       "Midland",
@@ -336,6 +364,7 @@
   },
   {
     "shortName": "Hepburn",
+    "slug": "hepburn",
     "councilName": "Hepburn Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -343,6 +372,7 @@
   },
   {
     "shortName": "Hindmarsh",
+    "slug": "hindmarsh",
     "councilName": "Hindmarsh Shire Council",
     "wardNames": [
       "North",
@@ -352,6 +382,7 @@
   },
   {
     "shortName": "Hobsons Bay",
+    "slug": "hobsons-bay",
     "councilName": "Hobsons Bay City Council",
     "wardNames": [
       "Laverton",
@@ -365,6 +396,7 @@
   },
   {
     "shortName": "Horsham",
+    "slug": "horsham",
     "councilName": "Horsham Rural City Council",
     "wardNames": [
       "Horsham North",
@@ -378,6 +410,7 @@
   },
   {
     "shortName": "Hume",
+    "slug": "hume",
     "councilName": "Hume City Council",
     "wardNames": [
       "Burt-kur-min",
@@ -395,6 +428,7 @@
   },
   {
     "shortName": "Indigo",
+    "slug": "indigo",
     "councilName": "Indigo Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -402,6 +436,7 @@
   },
   {
     "shortName": "Kingston",
+    "slug": "kingston",
     "councilName": "Kingston City Council",
     "wardNames": [
       "Wattle",
@@ -419,6 +454,7 @@
   },
   {
     "shortName": "Knox",
+    "slug": "knox",
     "councilName": "Knox City Council",
     "wardNames": [
       "Chandler",
@@ -434,6 +470,7 @@
   },
   {
     "shortName": "Latrobe",
+    "slug": "latrobe",
     "councilName": "Latrobe City Council",
     "wardNames": [
       "Jeeralang",
@@ -449,6 +486,7 @@
   },
   {
     "shortName": "Loddon",
+    "slug": "loddon",
     "councilName": "Loddon Shire Council",
     "wardNames": [
       "Terrick",
@@ -460,6 +498,7 @@
   },
   {
     "shortName": "Macedon Ranges",
+    "slug": "macedon-ranges",
     "councilName": "Macedon Ranges Shire Council",
     "wardNames": [
       "West",
@@ -469,6 +508,7 @@
   },
   {
     "shortName": "Manningham",
+    "slug": "manningham",
     "councilName": "Manningham City Council",
     "wardNames": [
       "Schramm",
@@ -484,6 +524,7 @@
   },
   {
     "shortName": "Mansfield",
+    "slug": "mansfield",
     "councilName": "Mansfield Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -491,6 +532,7 @@
   },
   {
     "shortName": "Maribyrnong",
+    "slug": "maribyrnong",
     "councilName": "Maribyrnong City Council",
     "wardNames": [
       "Braybrook",
@@ -504,6 +546,7 @@
   },
   {
     "shortName": "Maroondah",
+    "slug": "maroondah",
     "councilName": "Maroondah City Council",
     "wardNames": [
       "Yarrunga",
@@ -519,6 +562,7 @@
   },
   {
     "shortName": "Melbourne",
+    "slug": "melbourne",
     "councilName": "Melbourne City Council",
     "wardNames": [
       "Unsubdivided"
@@ -526,6 +570,7 @@
   },
   {
     "shortName": "Melton",
+    "slug": "melton",
     "councilName": "Melton City Council",
     "wardNames": [
       "Jackwood",
@@ -542,6 +587,7 @@
   },
   {
     "shortName": "Merri-bek",
+    "slug": "merri-bek",
     "councilName": "Merri-bek City Council",
     "wardNames": [
       "Harmony Park",
@@ -559,6 +605,7 @@
   },
   {
     "shortName": "Mildura",
+    "slug": "mildura",
     "councilName": "Mildura Rural City Council",
     "wardNames": [
       "Millewa",
@@ -574,6 +621,7 @@
   },
   {
     "shortName": "Mitchell",
+    "slug": "mitchell",
     "councilName": "Mitchell Shire Council",
     "wardNames": [
       "South",
@@ -583,6 +631,7 @@
   },
   {
     "shortName": "Moira",
+    "slug": "moira",
     "councilName": "Moira Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -590,6 +639,7 @@
   },
   {
     "shortName": "Monash",
+    "slug": "monash",
     "councilName": "Monash City Council",
     "wardNames": [
       "Gardiners Creek",
@@ -607,6 +657,7 @@
   },
   {
     "shortName": "Moonee Valley",
+    "slug": "moonee-valley",
     "councilName": "Moonee Valley City Council",
     "wardNames": [
       "Steele Creek",
@@ -622,6 +673,7 @@
   },
   {
     "shortName": "Moorabool",
+    "slug": "moorabool",
     "councilName": "Moorabool Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -629,6 +681,7 @@
   },
   {
     "shortName": "Mornington Peninsula",
+    "slug": "mornington-peninsula",
     "councilName": "Mornington Peninsula Shire Council",
     "wardNames": [
       "Briars",
@@ -646,6 +699,7 @@
   },
   {
     "shortName": "Mount Alexander",
+    "slug": "mount-alexander",
     "councilName": "Mount Alexander Shire Council",
     "wardNames": [
       "Campbells Creek",
@@ -660,6 +714,7 @@
   },
   {
     "shortName": "Moyne",
+    "slug": "moyne",
     "councilName": "Moyne Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -667,6 +722,7 @@
   },
   {
     "shortName": "Murrindindi",
+    "slug": "murrindindi",
     "councilName": "Murrindindi Shire Council",
     "wardNames": [
       "Kinglake",
@@ -680,6 +736,7 @@
   },
   {
     "shortName": "Nillumbik",
+    "slug": "nillumbik",
     "councilName": "Nillumbik Shire Council",
     "wardNames": [
       "Wingrove",
@@ -693,6 +750,7 @@
   },
   {
     "shortName": "Northern Grampians",
+    "slug": "northern-grampians",
     "councilName": "Northern Grampians Shire Council",
     "wardNames": [
       "Kara Kara",
@@ -702,6 +760,7 @@
   },
   {
     "shortName": "Port Phillip",
+    "slug": "port-phillip",
     "councilName": "Port Phillip City Council",
     "wardNames": [
       "St Kilda",
@@ -717,6 +776,7 @@
   },
   {
     "shortName": "Pyrenees",
+    "slug": "pyrenees",
     "councilName": "Pyrenees Shire Council",
     "wardNames": [
       "Avoca",
@@ -728,6 +788,7 @@
   },
   {
     "shortName": "South Gippsland",
+    "slug": "south-gippsland",
     "councilName": "South Gippsland Shire Council",
     "wardNames": [
       "Tarwin Valley",
@@ -737,6 +798,7 @@
   },
   {
     "shortName": "Southern Grampians",
+    "slug": "southern-grampians",
     "councilName": "Southern Grampians Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -744,6 +806,7 @@
   },
   {
     "shortName": "Stonnington",
+    "slug": "stonnington",
     "councilName": "Stonnington City Council",
     "wardNames": [
       "Hedgeley Dene",
@@ -759,6 +822,7 @@
   },
   {
     "shortName": "Strathbogie",
+    "slug": "strathbogie",
     "councilName": "Strathbogie Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -766,6 +830,7 @@
   },
   {
     "shortName": "Surf Coast",
+    "slug": "surf-coast",
     "councilName": "Surf Coast Shire Council",
     "wardNames": [
       "Otway Range",
@@ -775,6 +840,7 @@
   },
   {
     "shortName": "Swan Hill",
+    "slug": "swan-hill",
     "councilName": "Swan Hill Rural City Council",
     "wardNames": [
       "Unsubdivided"
@@ -782,6 +848,7 @@
   },
   {
     "shortName": "Towong",
+    "slug": "towong",
     "councilName": "Towong Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -789,6 +856,7 @@
   },
   {
     "shortName": "Wangaratta",
+    "slug": "wangaratta",
     "councilName": "Wangaratta Rural City Council",
     "wardNames": [
       "Ovens",
@@ -802,6 +870,7 @@
   },
   {
     "shortName": "Warrnambool",
+    "slug": "warrnambool",
     "councilName": "Warrnambool City Council",
     "wardNames": [
       "Botanic",
@@ -815,6 +884,7 @@
   },
   {
     "shortName": "Wellington",
+    "slug": "wellington",
     "councilName": "Wellington Shire Council",
     "wardNames": [
       "Northern",
@@ -824,6 +894,7 @@
   },
   {
     "shortName": "West Wimmera",
+    "slug": "west-wimmera",
     "councilName": "West Wimmera Shire Council",
     "wardNames": [
       "Unsubdivided"
@@ -831,6 +902,7 @@
   },
   {
     "shortName": "Whitehorse",
+    "slug": "whitehorse",
     "councilName": "Whitehorse City Council",
     "wardNames": [
       "Cootamundra",
@@ -848,6 +920,7 @@
   },
   {
     "shortName": "Whittlesea",
+    "slug": "whittlesea",
     "councilName": "Whittlesea City Council",
     "wardNames": [
       "Mill Park",
@@ -865,6 +938,7 @@
   },
   {
     "shortName": "Wodonga",
+    "slug": "wodonga",
     "councilName": "Wodonga City Council",
     "wardNames": [
       "Sumsion Gardens",
@@ -878,6 +952,7 @@
   },
   {
     "shortName": "Wyndham",
+    "slug": "wyndham",
     "councilName": "Wyndham City Council",
     "wardNames": [
       "Iramoo",
@@ -895,6 +970,7 @@
   },
   {
     "shortName": "Yarra",
+    "slug": "yarra",
     "councilName": "Yarra City Council",
     "wardNames": [
       "Yarra Bend",
@@ -910,6 +986,7 @@
   },
   {
     "shortName": "Yarra Ranges",
+    "slug": "yarra-ranges",
     "councilName": "Yarra Ranges Shire Council",
     "wardNames": [
       "Chirnside",
@@ -925,6 +1002,7 @@
   },
   {
     "shortName": "Yarriambiack",
+    "slug": "yarriambiack",
     "councilName": "Yarriambiack Shire Council",
     "wardNames": [
       "Warracknabeal",

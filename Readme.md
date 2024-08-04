@@ -11,7 +11,7 @@ The "short" named is created by taking the electorate name and removing the word
 The file can be generated using the `jq` tool and the VEC data:
 
 ```
-jq '[.[] | {name: .electorateName, electorateId: .electorateId, shortName: .parentElectorateName | match("(.*?)(?:(?: Rural)?(?: City| Shire) Council)").captures[0].string, parentElectorateId: .parentElectorateId, councilName: .parentElectorateName }] | group_by(.parentElectorateId) | map({shortName: .[0].shortName, councilName: .[0].councilName, wardNames: . | map(.name) }) | sort_by(.shortName)' "VEC Data\wards.json" > council_names.json
+jq '[.[] | {name: .electorateName, electorateId: .electorateId, shortName: .parentElectorateName | match("(.*?)(?:(?: Rural)?(?: City| Shire) Council)").captures[0].string, parentElectorateId: .parentElectorateId, councilName: .parentElectorateName }] | group_by(.parentElectorateId) | map({shortName: .[0].shortName, slug: .[0].shortName | ascii_downcase | split(" ") | join("-"), councilName: .[0].councilName, wardNames: . | map(.name) }) | sort_by(.shortName)' "VEC Data\wards.json" > council_names.json
 ```
 
 ## make-council-pages.sh
