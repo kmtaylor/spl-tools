@@ -3,8 +3,9 @@
 # This script uses the jq, wp, and php commands, make sure they are installed before running this script.
 
 # The council_names.json file must contain a list of objects (one for each council).
-# Each object must have the following fields: "shortName", "councilName", and "wardNames"
+# Each object must have the following fields: "shortName", "slug", "councilName", and "wardNames"
 # The "shortName" field must be a string.
+# The "slug" field must be a string.
 # The "councilName" field must be a string.
 # The "wardNames" field must be a list of strings.
 JSON_FILE="council_names.json"
@@ -18,7 +19,9 @@ function create_or_update_page() {
 
   short_name=$(echo "$council_block" | jq -r '.shortName')
 
-  content=$(echo "$council_block" | jq -c | php php-template/main.php)
+  slug=$(echo "$council_block" | jq -r '.slug')
+
+  content=$(echo "$council_block" | jq -c | php php-template/main.php "php://stdin" "candidates/$slug.csv")
 
   if [ $? -eq 0 ]; then
 
