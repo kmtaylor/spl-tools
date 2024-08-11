@@ -9,8 +9,9 @@
  <?php endif ?>
 
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
-<!-- wp:heading {"className":"is-style-default"} -->
-<h2 class="wp-block-heading is-style-default" id="<?php echo strtolower(str_replace(' ', '-', $wardName)); ?>"><?php echo $wardName; ?></h2>
+<!-- wp:heading {"level":3,"className":"is-style-default"} -->
+<?php $wardSlug = strtolower(str_replace(' ', '-', $wardName)); ?>
+<h3 class="wp-block-heading is-style-default" id="<?php echo $wardSlug; ?>"><a style="text-decoration: none;" href="#<?php echo $wardSlug; ?>"><?php echo $wardName; ?></a></h3>
 <!-- /wp:heading -->
 
 <?php
