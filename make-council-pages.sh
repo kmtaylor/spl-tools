@@ -52,9 +52,13 @@ data=$(cat "$COUNCILS_FILE")
 # Get all page IDs in one go because the wp command is pretty slow
 wp_posts=$(wp post list --post_type=page --format=json $WP_FLAGS)
 
+selected_council="$1"
+
 # Iterate over JSON objects
 jq -c '.[] | .' <<< "$data" | while IFS=' ' read -r council_block; do
   short_name=$(echo "$council_block" | jq -r '.shortName')
   page_id=$(echo $wp_posts | jq '.[] | select(.post_title == "'"$short_name"'") | .ID' | head -n 1)
-  create_or_update_page "$council_block" "$page_id"
+  if [ ! "$selected_council" ] || [ "$short_name" = "$selected_council" ]; then
+    create_or_update_page "$council_block" "$page_id"
+  fi
 done
