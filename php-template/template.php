@@ -19,6 +19,13 @@ $wardCandidates = array_filter($candidates, function ($candidate) use ($wardName
     return isset($candidate["Ward"]) && $candidate["Ward"] === $wardName;
 });
 
+usort($wardCandidates, function($a, $b) {
+    if ($a == $b) {
+        return 0;
+    }
+    return (((int) $a) < ((int) $b)) ? 1 : -1;
+});
+
 if (count($wardCandidates) == 0) continue;
 ?>
 <!-- wp:group {"layout":{"type":"grid","columnCount":3}} -->
