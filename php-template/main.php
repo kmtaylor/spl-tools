@@ -1,7 +1,7 @@
 <?php
 require_once "page_renderer.php";
 
-$options = getopt("", ["council-file:", "candidates-file:"]);
+$options = getopt("", ["council-file:", "candidates-file:", "media-file:"]);
 
 if (isset($options['council-file'])) {
     $councilFileContents = file_get_contents($options['council-file']);
@@ -50,8 +50,17 @@ if (empty($candidateData)) {
     error_log("Failed to load any candidates for " . $councilData['shortName']);
 }
 
+if (isset($options['media-file'])) {
+    $mediaFileContents = file_get_contents($options['media-file']);
+} else {
+    error_log("Error: Missing required option '--media-file'.");
+    exit(1);
+}
+
+$mediaData = json_decode($mediaFileContents, true);
+
 $renderer = new SPLPageRenderer();
-$pageContent = $renderer->renderCouncilPage($councilData, $candidateData);
+$pageContent = $renderer->renderCouncilPage($councilData, $candidateData, $mediaData);
 if ($pageContent === null) {
     exit(2);
 }

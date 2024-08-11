@@ -25,7 +25,9 @@ function create_or_update_page() {
 
   slug=$(echo "$council_block" | jq -r '.slug')
 
-  content=$(echo "$council_block" | jq -c | php php-template/main.php --council-file "php://stdin" --candidates-file "$DATA_PATH/$slug/candidates.csv)
+  jq -n '[inputs | { (input_filename | sub("\\.json$"; "") | sub("^.+/"; "")): . }] | reduce .[] as $item ({}; . + $item)' "$DATA_PATH"/$slug/*.json > "$DATA_PATH"/$slug/media.json
+
+  content=$(echo "$council_block" | jq -c | php php-template/main.php --council-file "php://stdin" --candidates-file "$DATA_PATH"/$slug/candidates.csv --media-file "$DATA_PATH"/$slug/media.json )
 
   if [ $? -eq 0 ]; then
 
@@ -40,6 +42,8 @@ function create_or_update_page() {
   else
     echo "Failed to generate page content for $short_name"
   fi
+
+  rm "$DATA_PATH"/$slug/media.json
 }
 
 # Read council data

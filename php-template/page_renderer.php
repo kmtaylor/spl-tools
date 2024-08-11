@@ -1,7 +1,7 @@
 <?php
 
 class SPLPageRenderer {
-    public function renderCouncilPage($config, $candidates) {
+    public function renderCouncilPage($config, $candidates, $media) {
         ob_start();
 
         $didError = false;
