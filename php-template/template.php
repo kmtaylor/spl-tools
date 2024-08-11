@@ -2,6 +2,12 @@
 <p><?php echo $config['councilName']; ?></p>
 <!-- /wp:paragraph -->
 
+<?php if (isset($media["header.jpg"])): ?>
+<!-- wp:image {"id":<?php echo $media["header.jpg"]['id']; ?>,"aspectRatio":"16/9","scale":"cover","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo $media["header.jpg"]['url']; ?>" alt="" class="wp-image-<?php echo $media["header.jpg"]['id']; ?>" style="aspect-ratio:16/9;object-fit:cover"/></figure>
+<!-- /wp:image -->
+ <?php endif ?>
+
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
 <!-- wp:heading {"className":"is-style-default"} -->
 <h2 class="wp-block-heading is-style-default" id="<?php echo strtolower(str_replace(' ', '-', $wardName)); ?>"><?php echo $wardName; ?></h2>
