@@ -11,6 +11,8 @@ WP_FLAGS="--allow-root --path=/var/www/html"
 
 path="$1"
 
+wp package install wp-cli/restful $WP_FLAGS
+
 if test -d "$path"; then
   echo "Found $path, starting upload."
   for file in "$path"/*.jpg; do
