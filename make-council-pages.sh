@@ -8,7 +8,7 @@
 # The "slug" field must be a string.
 # The "councilName" field must be a string.
 # The "wardNames" field must be a list of strings.
-JSON_FILE="council_names.json"
+COUNCILS_FILE="council_names.json"
 
 # Controls the flags that are passed to every usage of the wp command.
 WP_FLAGS="--allow-root --path=/var/www/html"
@@ -38,8 +38,8 @@ function create_or_update_page() {
   fi
 }
 
-# Read JSON data
-data=$(cat "$JSON_FILE")
+# Read council data
+data=$(cat "$COUNCILS_FILE")
 
 # Get all page IDs in one go because the wp command is pretty slow
 wp_posts=$(wp post list --post_type=page --format=json $WP_FLAGS)
