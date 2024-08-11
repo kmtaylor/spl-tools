@@ -23,15 +23,23 @@ if (count($wardCandidates) == 0) continue;
 <!-- wp:group {"layout":{"type":"grid","columnCount":3}} -->
 <div class="wp-block-group">
     <?php foreach ($wardCandidates as $index => $candidate): ?>
-    <!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+    <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
     <div class="wp-block-group">
-        <!-- wp:heading {"fontSize":"medium"} -->
-        <h2 class="wp-block-heading has-medium-font-size"><?php echo $candidate['Candidate Name']; ?></h2>
-        <!-- /wp:heading -->
+        <?php 
+            if (isset($media[$candidate['Picture']])) {
+                $candidate_image = $media[$candidate['Picture']];
+            } else {
+                $candidate_image = $media['default.png'];
+            }
+        ?>
 
-        <!-- wp:image {"aspectRatio":"1","scale":"cover","style":{"color":{}}} -->
-        <figure class="wp-block-image"><img alt="" style="aspect-ratio:1;object-fit:cover"/></figure>
+        <!-- wp:image {"id":<?php echo $candidate_image['id']; ?>,"aspectRatio":"1","scale":"cover","style":{"color":{}}} -->
+        <figure class="wp-block-image"><img src="<?php echo $candidate_image['url']; ?>" alt="" class="wp-image-<?php echo $candidate_image['id']; ?>" style="aspect-ratio:1;object-fit:cover"/></figure>
         <!-- /wp:image -->
+
+        <!-- wp:heading {"fontSize":"medium"} -->
+        <h2 class="wp-block-heading has-medium-font-size"><strong><?php echo $candidate['Candidate Name']; ?></strong></h2>
+        <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
         <p>Lorem Ipsum</p>
