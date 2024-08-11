@@ -50,7 +50,7 @@ if (count($wardCandidates) == 0) continue;
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
-        <p>Lorem Ipsum</p>
+        <p><?php echo str_repeat("✔️", $candidate['Rating']); ?></p>
         <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->
