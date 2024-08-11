@@ -10,6 +10,10 @@
 # The "wardNames" field must be a list of strings.
 COUNCILS_FILE="council_names.json"
 
+# The folder containing data for each council.
+# Includes the list of candidates and any media.
+DATA_PATH="data"
+
 # Controls the flags that are passed to every usage of the wp command.
 WP_FLAGS="--allow-root --path=/var/www/html"
 
@@ -21,7 +25,7 @@ function create_or_update_page() {
 
   slug=$(echo "$council_block" | jq -r '.slug')
 
-  content=$(echo "$council_block" | jq -c | php php-template/main.php --council-file "php://stdin" --candidates-file "candidates/$slug.csv")
+  content=$(echo "$council_block" | jq -c | php php-template/main.php --council-file "php://stdin" --candidates-file "$DATA_PATH/$slug/candidates.csv)
 
   if [ $? -eq 0 ]; then
 
