@@ -63,3 +63,9 @@ if (count($wardCandidates) == 0) continue;
 </div>
 <!-- /wp:group -->
 <?php endforeach; ?>
+
+<?php if (isset($config['footer'])): ?>
+<!-- wp:paragraph -->
+<p><?php echo $config['footer']; ?></p>
+<!-- /wp:paragraph -->
+<?php endif; ?>
