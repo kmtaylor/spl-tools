@@ -1,5 +1,9 @@
-<!-- wp:paragraph -->
-<p><?php echo $config['councilName']; ?></p>
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">The Streets People Love campaign has created scorecards for candidates in the 2024 council elections. Scorecards have been generated based on a candidate's engagement with the Streets People Love campaign, their commitment to our pledge, their responses to a survey and input from campaign members located in the local government area in which they are running.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Have candidates in your local government area not yet taken part? Send your local candidates the <a href="https://forms.gle/gnDNyBiVC64tDo2Y7">Streets People Love Pledge and Survey</a> and ask them to complete it so that local residents can vote for the candidates who want to build the streets people love.</p>
 <!-- /wp:paragraph -->
 
 <?php if (isset($media["header.jpg"])): ?>
