@@ -17,7 +17,7 @@ if test -f "$media_path"; then
   else
     echo "Could not find $media_path.json, uploading media!"
     id=$(wp media import "$media_path" --porcelain $WP_FLAGS)
-    url=$(wp rest attachment get "$id" --field=source_url $WP_FLAGS)
+    url=$(wp rest attachment get "$id" --field=source_url $WP_FLAGS | sed 's/127.0.0.1/streetspeoplelove.org/')
     jq -n --arg id $id --arg url "$url" '{"id": $id, "url": $url}' > "$media_path.json"
     cat "$media_path.json"
   fi
