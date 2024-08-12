@@ -22,6 +22,8 @@ if test -f "$media_path"; then
       url=$(echo "$raw_url" | sed 's/127.0.0.1/streetspeoplelove.org/')
       jq -n --arg id $id --arg url "$url" '{"id": $id, "url": $url}' > "$media_path.json"
       cat "$media_path.json"
+    else 
+      echo "Failed to upload $media_path"
     fi
   fi
 else
