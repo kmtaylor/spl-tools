@@ -28,7 +28,7 @@ usort($wardCandidates, function($a, $b) {
 
 if (count($wardCandidates) == 0) continue;
 ?>
-<!-- wp:group {"layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:group {"layout":{"type":"grid","columnCount":4}} -->
 <div class="wp-block-group">
     <?php foreach ($wardCandidates as $index => $candidate): ?>
     <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
