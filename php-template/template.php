@@ -49,8 +49,8 @@ if (count($wardCandidates) == 0) continue;
         <h2 class="wp-block-heading has-medium-font-size"><strong><?php echo $candidate['Candidate Name']; ?></strong></h2>
         <!-- /wp:heading -->
 
-        <!-- wp:paragraph -->
-        <p><?php echo str_repeat("✔️", $candidate['Rating']); ?></p>
+        <!-- wp:paragraph {"style":{"layout":{"selfStretch":"fit","flexSize":null}},"fontSize":"large"} -->
+        <p class="has-large-font-size" style="color: rgba(100%, 0%, 0%, 0); text-shadow: 0 0 0 green;"><?php echo str_repeat("✔️", $candidate['Rating']); ?></p>
         <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->
