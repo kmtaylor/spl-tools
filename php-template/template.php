@@ -41,8 +41,8 @@ if (count($wardCandidates) == 0) continue;
             }
         ?>
 
-        <!-- wp:image {"id":<?php echo $candidate_image['id']; ?>,"aspectRatio":"1","scale":"cover","style":{"color":{}}} -->
-        <figure class="wp-block-image"><img src="<?php echo $candidate_image['url']; ?>" alt="" class="wp-image-<?php echo $candidate_image['id']; ?>" style="aspect-ratio:1;object-fit:cover"/></figure>
+        <!-- wp:image {"id":<?php echo $candidate_image['id']; ?>,"width":"auto","height":"200px","aspectRatio":"1","scale":"cover","style":{"color":{}}} -->
+        <figure class="wp-block-image is-resized"><img src="<?php echo $candidate_image['url']; ?>" alt="" class="wp-image-<?php echo $candidate_image['id']; ?>" style="aspect-ratio:1;object-fit:cover"/></figure>
         <!-- /wp:image -->
 
         <!-- wp:heading {"fontSize":"medium"} -->
