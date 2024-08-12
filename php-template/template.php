@@ -38,7 +38,7 @@ if (count($wardCandidates) == 0) continue;
     <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
     <div class="wp-block-group">
         <?php 
-            if (isset($media[$candidate['Picture']])) {
+            if (isset($candidate['Picture']) && isset($media[$candidate['Picture']])) {
                 $candidate_image = $media[$candidate['Picture']];
             } else {
                 $candidate_image = $media['default.png'];
