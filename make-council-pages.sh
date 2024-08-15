@@ -17,7 +17,14 @@ function create_or_update_page() {
 
   slug=$(echo "$council_block" | jq -r '.slug')
 
-  jq -n '[inputs | { (input_filename | sub("\\.json$"; "") | sub("^.+/"; "")): . }] | reduce .[] as $item ({}; . + $item)' "$DATA_PATH"/$slug/*.json > "$DATA_PATH"/$slug/media.json
+  media_inputs=()
+  for file in "$DATA_PATH"/$slug/*.{jpeg,jpg,png,gif}.json; do
+    if test -f "$file"; then
+      media_inputs+=("$file")
+    fi
+  done
+
+  jq -n '[inputs | { (input_filename | sub("\\.json$"; "") | sub("^.+/"; "")): . }] | reduce .[] as $item ({}; . + $item)' "${media_inputs[@]}" > "$DATA_PATH"/$slug/media.json
 
   content=$(echo "$council_block" | jq -c | php php-template/main.php --council-file "php://stdin" --candidates-file "$DATA_PATH"/$slug/candidates.csv --media-file "$DATA_PATH"/$slug/media.json )
 
