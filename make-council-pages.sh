@@ -23,6 +23,11 @@ function create_or_update_page() {
       media_inputs+=("$file")
     fi
   done
+  for file in "$DATA_PATH"/*.{jpeg,jpg,png,gif}.json; do
+    if test -f "$file"; then
+      media_inputs+=("$file")
+    fi
+  done
 
   jq -n '[inputs | { (input_filename | sub("\\.json$"; "") | sub("^.+/"; "")): . }] | reduce .[] as $item ({}; . + $item)' "${media_inputs[@]}" > "$DATA_PATH"/$slug/media.json
 
