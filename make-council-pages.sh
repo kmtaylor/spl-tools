@@ -12,7 +12,7 @@ COUNCILS_FILE="council_names.json"
 
 # The folder containing data for each council.
 # Includes the list of candidates and any media.
-DATA_PATH="data"
+DATA_PATH="../spl-data"
 
 # Controls the flags that are passed to every usage of the wp command.
 WP_FLAGS="--allow-root --path=/var/www/html"
