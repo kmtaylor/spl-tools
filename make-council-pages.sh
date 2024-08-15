@@ -2,14 +2,6 @@
 
 # This script uses the jq, wp, and php commands, make sure they are installed before running this script.
 
-# The council_names.json file must contain a list of objects (one for each council).
-# Each object must have the following fields: "shortName", "slug", "councilName", and "wardNames"
-# The "shortName" field must be a string.
-# The "slug" field must be a string.
-# The "councilName" field must be a string.
-# The "wardNames" field must be a list of strings.
-COUNCILS_FILE="council_names.json"
-
 # The folder containing data for each council.
 # Includes the list of candidates and any media.
 DATA_PATH="../spl-data"
@@ -46,19 +38,19 @@ function create_or_update_page() {
   rm "$DATA_PATH"/$slug/media.json
 }
 
-# Read council data
-data=$(cat "$COUNCILS_FILE")
-
 # Get all page IDs in one go because the wp command is pretty slow
 wp_posts=$(wp post list --post_type=page --format=json $WP_FLAGS)
 
 selected_council="$1"
 
-# Iterate over JSON objects
-jq -c '.[] | .' <<< "$data" | while IFS=' ' read -r council_block; do
-  short_name=$(echo "$council_block" | jq -r '.shortName')
-  page_id=$(echo $wp_posts | jq '.[] | select(.post_title == "'"$short_name"'") | .ID' | head -n 1)
-  if [ ! "$selected_council" ] || [ "$short_name" = "$selected_council" ]; then
-    create_or_update_page "$council_block" "$page_id"
+# Iterate over folders in data path
+for folder in "$DATA_PATH"/*; do
+  if test -f "$folder"/config.json; then
+    council_block=$(cat "$folder"/config.json | jq -c)
+    short_name=$(echo "$council_block" | jq -r '.shortName')
+    page_id=$(echo $wp_posts | jq '.[] | select(.post_title == "'"$short_name"'") | .ID' | head -n 1)
+    if [ ! "$selected_council" ] || [ "$short_name" = "$selected_council" ]; then
+      create_or_update_page "$council_block" "$page_id"
+    fi
   fi
 done
