@@ -6,7 +6,7 @@
             "type": "php",
             "request": "launch",
             "program": "${workspaceFolder}/main.php",
-            "args": [],
+            "args": ["--input", "${workspaceFolder}/test-input.csv", "--media", "${workspaceFolder}/test-media", "--output", "${workspaceFolder}/test-output.csv",],
             "cwd": "${workspaceFolder}",
             "port": 9000
         }
