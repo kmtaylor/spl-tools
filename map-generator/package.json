@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "polylabel": "^2.0.1"
+    "polylabel": "^2.0.1",
+    "puppeteer-core": "^23.1.0"
   }
 }

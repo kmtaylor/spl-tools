@@ -11,3 +11,5 @@ To tell the page which council to load, add a query parameter to the URL eg. `?c
 To automatically compile the `src.js` file after every edit, run `webpack-cli --mode development --watch` in this folder.
 
 Changes to `dist/main.js` should be committed so that other users don't need to install node.
+
+The `capture-map.js` script can be used to capture an image of the map. It accepts 4 arguments, the council name, width, height, and output path. For example `node .\capture-map.js brimbank 900 500 ../../spl-data/brimbank/map.jpg` would capture a map of Brimbank City Council and place a file named `map.jpg` in the `../../spl-data/brimbank/` folder.
