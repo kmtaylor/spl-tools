@@ -40,6 +40,8 @@ fetch("wards_withboundaries.json")
                     "north": undefined
                 }
 
+                var labelFeatures = [];
+
                 filteredWardData.forEach(wardData => {
                     const featureCollection = {
                         'type': 'FeatureCollection',
@@ -89,36 +91,61 @@ fetch("wards_withboundaries.json")
 
                     const centrePoint = polylabel(featureCollection.features[0].geometry.coordinates, 0.000001);
 
-                    map.addSource('center_'+wardData.electorateId, {
-                        'type': 'geojson',
-                        'data': {
-                            'type': 'FeatureCollection',
-                            'features': [
-                                {
-                                    'type': 'Feature',
-                                    'properties': {
-                                        'description': wardData.electorateName
-                                    },
-                                    'geometry': {
-                                        'type': 'Point',
-                                        'coordinates': centrePoint
-                                    }
-                                }
-                            ]
+                    if (wardData.electorateName.includes(' ')) {
+                        // Breaking long names into newlines looks better
+                        const parts = wardData.electorateName.split(' ');
+                        // Special case if a ward starts with "St" (like "St Albans East")
+                        // Join the first two parts
+                        if (parts[0] == "St") {
+                            parts[0] = parts[0] + ' ' + parts[1];
+                            parts.splice(1, 1);
                         }
-                    });
+                        const wardNameNewLines = parts.join('\n');
+                        labelFeatures.push({
+                            'type': 'Feature',
+                            'properties': {
+                                'description': wardNameNewLines
+                            },
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': centrePoint
+                            }
+                        });
+                    } else {
+                        labelFeatures.push({
+                            'type': 'Feature',
+                            'properties': {
+                                'description': wardData.electorateName
+                            },
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': centrePoint
+                            }
+                        });
+                    }
+                });
 
-                    map.addLayer({
-                        'id': 'label_'+wardData.electorateId,
-                        'type': 'symbol',
-                        'source': 'center_'+wardData.electorateId,
-                        'layout': {
-                            'text-field': ['get', 'description'],
-                            'text-variable-anchor': ['center', 'top', 'bottom'],
-                            'text-justify': 'auto',
-                            'text-allow-overlap': true
-                        }
-                    });
+                map.addSource('labels', {
+                    'type': 'geojson',
+                    'data': {
+                        'type': 'FeatureCollection',
+                        'features': labelFeatures
+                    }
+                });
+
+                map.addLayer({
+                    'id': 'labels',
+                    'type': 'symbol',
+                    'source': 'labels',
+                    'layout': {
+                        'text-field': ['get', 'description'],
+                        'text-variable-anchor': ['center', 'top', 'bottom'],
+                        'text-radial-offset': 0.5,
+                        'text-padding': 0,
+                        'text-justify': 'auto',
+                        'text-allow-overlap': false,
+                        'text-ignore-placement': false,
+                    }
                 });
 
                 map.fitBounds([
@@ -132,5 +159,5 @@ fetch("wards_withboundaries.json")
             }).catch(err => {
                 console.log(err);
             });
-    })
+    });
     
