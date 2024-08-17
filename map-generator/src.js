@@ -33,6 +33,13 @@ fetch("wards_withboundaries.json")
             .then((wardData) => {
                 const filteredWardData = wardData.filter((ward) => normaliseCouncilName(ward.parentElectorateName) == councilName);
 
+                var bounds = {
+                    "west": undefined,
+                    "south": undefined,
+                    "east": undefined,
+                    "north": undefined
+                }
+
                 filteredWardData.forEach(wardData => {
                     const featureCollection = {
                         'type': 'FeatureCollection',
@@ -43,6 +50,24 @@ fetch("wards_withboundaries.json")
                             }
                         ]
                     };
+
+                    featureCollection.features[0].geometry.coordinates[0].forEach(coordinate => {
+                        if (bounds.west == undefined || coordinate[0] < bounds.west) {
+                            bounds.west = coordinate[0];
+                        }
+
+                        if (bounds.south == undefined || coordinate[1] < bounds.south) {
+                            bounds.south = coordinate[1];
+                        }
+
+                        if (bounds.east == undefined || coordinate[0] > bounds.east) {
+                            bounds.east = coordinate[0];
+                        }
+
+                        if (bounds.north == undefined || coordinate[1] > bounds.north) {
+                            bounds.north = coordinate[1];
+                        }
+                    });
 
                     // Add data
                     map.addSource("data_"+wardData.electorateId, {
@@ -94,7 +119,14 @@ fetch("wards_withboundaries.json")
                             'text-allow-overlap': true
                         }
                     });
+                });
 
+                map.fitBounds([
+                    [bounds.west, bounds.south],
+                    [bounds.east, bounds.north]
+                ], {
+                    padding: 25,
+                    animate: false
                 });
 
             }).catch(err => {
