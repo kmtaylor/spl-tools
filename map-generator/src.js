@@ -21,6 +21,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHl3YXkiLCJhIjoiY2x6eG9vMzZyMHY2cDJqb3M1O
 const map = new mapboxgl.Map({
     container: 'map',
     zoom: 10,
+    style: 'mapbox://styles/mattyway/clzy2ozzf004k01pn840h9xdb',
     center: [145.00724,-37.79011]
 });
 
@@ -101,12 +102,3 @@ fetch("wards_withboundaries.json")
             });
     })
     
-
-
-map.on('style.load', () => {
-    map.setConfigProperty('basemap', 'showPlaceLabels', false);
-    map.setConfigProperty('basemap', 'showPointOfInterestLabels', false);
-    map.setConfigProperty('basemap', 'showRoadLabels', false);
-    map.setConfigProperty('basemap', 'showTransitLabels', false);
-    map.setConfigProperty('basemap', 'show3dObjects', false);
-});
