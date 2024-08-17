@@ -13,3 +13,5 @@ To automatically compile the `src.js` file after every edit, run `webpack-cli --
 Changes to `dist/main.js` should be committed so that other users don't need to install node.
 
 The `capture-map.js` script can be used to capture an image of the map. It accepts 4 arguments, the council name, width, height, and output path. For example `node .\capture-map.js brimbank 900 500 ../../spl-data/brimbank/map.jpg` would capture a map of Brimbank City Council and place a file named `map.jpg` in the `../../spl-data/brimbank/` folder.
+
+The `capture-all-maps.js` script can be used to capture an image for each council. It accepts 3 arguments, width, height, and the path to the `spl-data` repo. For example `node .\capture-all-maps.js 900 500 ../../spl-data` would capture a map of each council and put it in the spl-data repo in the appropriate folder.
