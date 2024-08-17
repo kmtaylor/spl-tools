@@ -25,8 +25,6 @@ const map = new mapboxgl.Map({
     center: [145.00724,-37.79011]
 });
 
-map.addControl(new mapboxgl.NavigationControl());
-
 fetch("wards_withboundaries.json")
     .then(response => {
         response.json()
