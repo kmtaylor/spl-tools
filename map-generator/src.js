@@ -38,6 +38,24 @@ fetch("wards_withboundaries.json")
                     "north": undefined
                 }
 
+                function addToBounds(coordinate) {
+                    if (bounds.west == undefined || coordinate[0] < bounds.west) {
+                        bounds.west = coordinate[0];
+                    }
+
+                    if (bounds.south == undefined || coordinate[1] < bounds.south) {
+                        bounds.south = coordinate[1];
+                    }
+
+                    if (bounds.east == undefined || coordinate[0] > bounds.east) {
+                        bounds.east = coordinate[0];
+                    }
+
+                    if (bounds.north == undefined || coordinate[1] > bounds.north) {
+                        bounds.north = coordinate[1];
+                    }
+                }
+
                 var labelFeatures = [];
 
                 filteredWardData.forEach(wardData => {
@@ -51,23 +69,18 @@ fetch("wards_withboundaries.json")
                         ]
                     };
 
-                    featureCollection.features[0].geometry.coordinates[0].forEach(coordinate => {
-                        if (bounds.west == undefined || coordinate[0] < bounds.west) {
-                            bounds.west = coordinate[0];
-                        }
-
-                        if (bounds.south == undefined || coordinate[1] < bounds.south) {
-                            bounds.south = coordinate[1];
-                        }
-
-                        if (bounds.east == undefined || coordinate[0] > bounds.east) {
-                            bounds.east = coordinate[0];
-                        }
-
-                        if (bounds.north == undefined || coordinate[1] > bounds.north) {
-                            bounds.north = coordinate[1];
-                        }
-                    });
+                    if (featureCollection.features[0].geometry.type == "Polygon") {
+                        featureCollection.features[0].geometry.coordinates[0].forEach(coordinate => {
+                            addToBounds(coordinate);
+                        });
+                    }
+                    if (featureCollection.features[0].geometry.type == "MultiPolygon") {
+                        featureCollection.features[0].geometry.coordinates.forEach(polygon => {
+                            polygon[0].forEach(coordinate => {
+                                addToBounds(coordinate);
+                            });
+                        });
+                    }
 
                     // Add data
                     map.addSource("data_"+wardData.electorateId, {
@@ -87,7 +100,19 @@ fetch("wards_withboundaries.json")
                         }
                     });
 
-                    const centrePoint = polylabel(featureCollection.features[0].geometry.coordinates, 0.000001);
+                    var centrePoint;
+                    if (featureCollection.features[0].geometry.type == "Polygon") {
+                        centrePoint = polylabel(featureCollection.features[0].geometry.coordinates, 0.000001);
+                    }
+                    if (featureCollection.features[0].geometry.type == "MultiPolygon") {
+                        // TODO: Find the biggest polygon in the multipolygon and use that to find the centre point 
+                        // instead of just picking the second polygon.
+                        //
+                        // The 2024 set of boundaries only uses 2 MultiPolygon objects (Cathedral in Murrindindi Shire Council and Island in Bass Coast Shire Council)
+                        // Luckily, the second polygon for both objects results in a good label placement.
+                        centrePoint = polylabel(featureCollection.features[0].geometry.coordinates[1], 0.000001);
+                    }
+                    
 
                     if (wardData.electorateName.includes(' ')) {
                         // Breaking long names into newlines looks better
