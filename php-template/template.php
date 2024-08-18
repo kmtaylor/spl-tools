@@ -75,8 +75,8 @@
                             <figure class="wp-block-image aligncenter is-resized"><img src="<?php echo $candidate_image['url']; ?>" alt="" class="wp-image-<?php echo $candidate_image['id']; ?>" style="object-fit:cover;width:200px;height:200px"/></figure>
                             <!-- /wp:image -->
 
-                            <!-- wp:heading {"textAlign":"center","className":"wp-block-heading has-text-align-center has-medium-font-size","style":{"spacing":{"margin":{"top":"1rem"}}}} -->
-                            <h2 class="wp-block-heading has-text-align-center has-medium-font-size" style="margin-top:1rem"><strong><?php echo $candidate['Candidate Name']; ?></strong></h2>
+                            <!-- wp:heading {"textAlign":"center","className":"wp-block-heading has-text-align-center has-medium-font-size","style":{"spacing":{"margin":{"top":"1rem","bottom":"0.5rem"}}}} -->
+                            <h2 class="wp-block-heading has-text-align-center has-medium-font-size" style="margin-top:1rem;margin-bottom:0.5rem"><strong><?php echo $candidate['Candidate Name']; ?></strong></h2>
                             <!-- /wp:heading -->
 
                             <!-- wp:paragraph {"align":"center","style":{"layout":{"selfStretch":"fit","flexSize":null},"typography":{"lineHeight":"1"},"spacing":{"margin":{"top":"0.5rem","bottom":"1.5rem"}}},"fontSize":"large"} -->
