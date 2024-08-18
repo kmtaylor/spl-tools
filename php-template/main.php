@@ -27,23 +27,23 @@ if (isset($options['candidates-file'])) {
 
 // Convert CSV into an array of dictionaries. Use the header as the key in the dictionary.
 $candidateData = [];
-if (($handle = fopen($candidatesFile, "r")) !== FALSE) {
-    $headers = fgetcsv($handle);
-    while (($data = fgetcsv($handle)) !== FALSE) {
-        $candidate = [];
-        foreach ($headers as $key => $value) {
-            $candidate[$value] = $data[$key];
+if (file_exists($candidatesFile)) {
+    if (($handle = fopen($candidatesFile, "r")) !== FALSE) {
+        $headers = fgetcsv($handle);
+        while (($data = fgetcsv($handle)) !== FALSE) {
+            $candidate = [];
+            foreach ($headers as $key => $value) {
+                $candidate[$value] = $data[$key];
+            }
+            $candidateData[] = $candidate;
         }
-        $candidateData[] = $candidate;
+        fclose($handle);
+    } else {
+        error_log('Error opening candidates file');
+        exit(1);
     }
-    fclose($handle);
 } else {
-    error_log('Error opening candidates file');
-    exit(1);
-}
-
-if (empty($candidateData)) {
-    error_log("Failed to load any candidates for " . $councilData['shortName']);
+    error_log("The specified candidates.csv file does not exist, will not show any candidates for " . $councilData["shortName"] . ".");
 }
 
 if (isset($options['media-file'])) {
