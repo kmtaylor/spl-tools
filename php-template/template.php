@@ -13,55 +13,80 @@
  <?php endif ?>
 
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
-<!-- wp:heading {"level":3,"className":"is-style-default"} -->
-<?php $wardSlug = strtolower(str_replace(' ', '-', $wardName)); ?>
-<h3 class="wp-block-heading is-style-default" id="<?php echo $wardSlug; ?>"><a style="text-decoration: none;" href="#<?php echo $wardSlug; ?>"><?php echo $wardName; ?></a></h3>
-<!-- /wp:heading -->
+    <!-- wp:heading {"level":3,"className":"is-style-default"} -->
+    <?php $wardSlug = strtolower(str_replace(' ', '-', $wardName)); ?>
+    <h3 class="wp-block-heading is-style-default" id="<?php echo $wardSlug; ?>"><a style="text-decoration: none;" href="#<?php echo $wardSlug; ?>"><?php echo $wardName; ?></a></h3>
+    <!-- /wp:heading -->
 
-<?php
-$wardCandidates = array_filter($candidates, function ($candidate) use ($wardName) {
-    return isset($candidate["Ward"]) && $candidate["Ward"] === $wardName;
-});
+    <?php
+    $wardCandidates = array_filter($candidates, function ($candidate) use ($wardName) {
+        return isset($candidate["Ward"]) && $candidate["Ward"] === $wardName;
+    });
 
-usort($wardCandidates, function($a, $b) {
-    if ($a == $b) {
-        return 0;
-    }
-    return (((int) $a) < ((int) $b)) ? 1 : -1;
-});
+    usort($wardCandidates, function($a, $b) {
+        if ($a == $b) {
+            return 0;
+        }
+        return (((int) $a) < ((int) $b)) ? 1 : -1;
+    });
 
-if (count($wardCandidates) == 0) continue;
-?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"7rem"}}},"layout":{"type":"grid","columnCount":4}} -->
-<div class="wp-block-group" style="padding-top:0;padding-bottom:7rem">
-    <?php foreach ($wardCandidates as $index => $candidate): ?>
-    <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-    <div class="wp-block-group">
-        <?php 
-            if (isset($candidate['Picture']) && isset($media[$candidate['Picture']])) {
-                $candidate_image = $media[$candidate['Picture']];
-            } else {
-                $candidate_image = $media['default.png'];
-            }
+    if (count($wardCandidates) > 0):
+    ?>
+
+        <?php
+        $columnCount = 4;
+
+        $chunkedWardCandidates = array_chunk($wardCandidates, $columnCount);
         ?>
 
-        <!-- wp:image {"id":<?php echo $candidate_image['id']; ?>,"width":"200px","height":"200px","scale":"cover","style":{"color":{}},"className":"is-resized"} -->
-        <figure class="wp-block-image is-resized"><img src="<?php echo $candidate_image['url']; ?>" alt="" class="wp-image-<?php echo $candidate_image['id']; ?>" style="object-fit:cover;width:200px;height:200px"/></figure>
-        <!-- /wp:image -->
+        <?php foreach($chunkedWardCandidates as $chunk): ?>
+            <!-- wp:columns -->
+            <div class="wp-block-columns">
+                
+                <?php for ($columnIdx = 0; $columnIdx < $columnCount; $columnIdx++): ?>
+                    <!-- wp:column -->
+                    <div class="wp-block-column">
 
-        <!-- wp:heading {"fontSize":"medium"} -->
-        <h2 class="wp-block-heading has-medium-font-size"><strong><?php echo $candidate['Candidate Name']; ?></strong></h2>
-        <!-- /wp:heading -->
+                        <?php if (array_key_exists($columnIdx, $chunk)): ?>
+                            <?php 
+                                $candidate = $chunk[$columnIdx];
 
-        <!-- wp:paragraph {"style":{"layout":{"selfStretch":"fit","flexSize":null}},"fontSize":"large"} -->
-        <p class="has-large-font-size" style="color: rgba(100%, 0%, 0%, 0); text-shadow: 0 0 0 green;"><?php echo str_repeat("✔️", $candidate['Rating']); ?></p>
+                                if (isset($candidate['Picture']) && isset($media[$candidate['Picture']])) {
+                                    $candidate_image = $media[$candidate['Picture']];
+                                } else {
+                                    $candidate_image = $media['default.png'];
+                                }
+                            ?>
+
+                            <!-- wp:image {"id":<?php echo $candidate_image['id']; ?>,"width":"200px","height":"200px","scale":"cover","align":"center","style":{"color":{}},"className":"is-resized"} -->
+                            <figure class="wp-block-image aligncenter is-resized"><img src="<?php echo $candidate_image['url']; ?>" alt="" class="wp-image-<?php echo $candidate_image['id']; ?>" style="object-fit:cover;width:200px;height:200px"/></figure>
+                            <!-- /wp:image -->
+
+                            <!-- wp:heading {"textAlign":"center","className":"wp-block-heading has-text-align-center has-medium-font-size","style":{"spacing":{"margin":{"top":"1rem"}}}} -->
+                            <h2 class="wp-block-heading has-text-align-center has-medium-font-size" style="margin-top:1rem"><strong><?php echo $candidate['Candidate Name']; ?></strong></h2>
+                            <!-- /wp:heading -->
+
+                            <!-- wp:paragraph {"align":"center","style":{"layout":{"selfStretch":"fit","flexSize":null},"typography":{"lineHeight":"1"},"spacing":{"margin":{"top":"0.5rem","bottom":"1.5rem"}}},"fontSize":"large"} -->
+                            <p class="has-text-align-center has-large-font-size" style="margin-top:0.5rem;margin-bottom:1.5rem;line-height:1;color: rgba(100%, 0%, 0%, 0);text-shadow: 0 0 0 green;"><?php echo str_repeat("✔️", $candidate['Rating']); ?></p>
+                            <!-- /wp:paragraph -->
+                        <?php endif; ?>
+
+                    </div>
+                    <!-- /wp:column -->
+                <?php endfor; ?>
+
+            </div>
+            <!-- /wp:columns -->
+        <?php endforeach; ?>
+    
+    <?php else: ?>
+
+        <!-- wp:paragraph -->
+        <p>We don't know who the candidates are for <?php echo $wardName; ?> ward yet.</p>
         <!-- /wp:paragraph -->
-    </div>
-    <!-- /wp:group -->
-    <?php endforeach; ?>
 
-</div>
-<!-- /wp:group -->
+    <?php endif; ?>
+
 <?php endforeach; ?>
 
 <?php if (isset($config['footer'])): ?>
