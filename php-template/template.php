@@ -95,7 +95,7 @@
     <?php else: ?>
 
         <!-- wp:paragraph -->
-        <p>We don't know who the candidates are for <?php echo $wardName; ?> ward yet.</p>
+        <p>No candidates in this ward have completed the Streets People Love survey. Send your local candidates the <a href="https://forms.gle/gnDNyBiVC64tDo2Y7">Streets People Love Pledge and Survey</a> and ask them to take part so that local residents can vote for the candidates who want to build the streets people love.</p>
         <!-- /wp:paragraph -->
 
     <?php endif; ?>
