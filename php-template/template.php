@@ -57,13 +57,8 @@
                                     $candidate_image = $media['default.png'];
                                 }
 
-                                if ($candidate['Rating'] > 1) {
-                                    $candidate_rating = str_repeat("✔️", min(5, $candidate['Rating']));
-                                    $candidate_rating_colour = "green";
-                                } else {
-                                    $candidate_rating = "❌";
-                                    $candidate_rating_colour = "red";
-                                }
+                                $candidate_rating = str_repeat("✔️", max(0, min(5, $candidate['Rating'])));
+                                $candidate_rating_colour = "green";
 
                                 // If string is 5 ticks, insert a zero width space between the 3rd and 4th ticks so that it wraps nicer
                                 if ($candidate_rating == "✔️✔️✔️✔️✔️") {
