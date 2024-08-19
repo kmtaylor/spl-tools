@@ -60,9 +60,13 @@
                                 $candidate_rating = str_repeat("✔️", max(0, min(5, $candidate['Rating'])));
                                 $candidate_rating_colour = "green";
 
-                                // If string is 5 ticks, insert a zero width space between the 3rd and 4th ticks so that it wraps nicer
+                                // If string is 5 ticks, insert a zero width space entity between the 3rd and 4th ticks so that it wraps nicer
                                 if ($candidate_rating == "✔️✔️✔️✔️✔️") {
                                     $candidate_rating = "✔️✔️✔️&#8203;✔️✔️";
+                                }
+                                // If string is 4 ticks, insert a zero width space entity between the 2nd and 3rd ticks so that it wraps nicer
+                                if ($candidate_rating == "✔️✔️✔️✔️") {
+                                    $candidate_rating = "✔️✔️&#8203;✔️✔️";
                                 }
                             ?>
 
