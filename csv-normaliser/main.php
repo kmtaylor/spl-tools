@@ -86,7 +86,7 @@ if (($handle = fopen($inputFile, "r")) !== FALSE) {
                 }
             }
             if ($picture === "") {
-                print("Failed to identify picture for " . $candidateName);
+                print("Failed to identify picture for " . $candidateName . "\n");
             }
 
             array_push(
