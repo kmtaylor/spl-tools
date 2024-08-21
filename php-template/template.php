@@ -42,6 +42,49 @@ function sluggify($input) {
 <!-- /wp:image -->
 <?php endif ?>
 
+<?php if ($wardCount > 1): ?>
+
+    <?php 
+
+    if ($wardCount > 8) {
+        $wardListChunkSize = ceil($wardCount / 2);
+    } else {
+        $wardListChunkSize = $wardCount;
+    }
+
+    $wardChunks = array_chunk($config['wardNames'], $wardListChunkSize);
+
+    ?>
+    <!-- wp:columns -->
+    <div class="wp-block-columns">
+
+    <?php for ($columnIdx = 0; $columnIdx < 4; $columnIdx++): ?>
+        <!-- wp:column {"verticalAlignment":"top", "style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
+        <div class="wp-block-column is-vertically-aligned-top" style="padding-top:0;padding-bottom:0">
+            
+            <?php if (array_key_exists($columnIdx, $wardChunks)): ?>
+                <!-- wp:list -->
+                <ul class="wp-block-list">
+
+                    <?php foreach($wardChunks[$columnIdx] as $wardName): ?>
+                        <!-- wp:list-item -->
+                        <li><a href="#<?php echo sluggify($wardName); ?>"><?php echo $wardName; ?></a></li>
+                        <!-- /wp:list-item -->
+                    <?php endforeach; ?>
+
+                </ul>
+                <!-- /wp:list -->
+            <?php endif; ?>
+
+        </div>
+        <!-- /wp:column -->
+    <?php endfor; ?>
+
+    </div>
+    <!-- /wp:columns -->
+
+<?php endif; ?>
+
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
     <!-- wp:heading {"level":3,"className":"is-style-default"} -->
     <?php $wardSlug = sluggify($wardName); ?>
