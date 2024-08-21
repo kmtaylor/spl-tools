@@ -1,3 +1,11 @@
+<?php 
+
+function sluggify($input) {
+    return strtolower(str_replace(' ', '-', $input));
+}
+
+?>
+
 <!-- wp:paragraph -->
 <p>The Streets People Love campaign has created scorecards for candidates in the 2024 council elections. Scorecards have been generated based on a candidate's engagement with the Streets People Love campaign, their commitment to our pledge, their responses to a survey and input from campaign members located in the local government area in which they are running.</p>
 <!-- /wp:paragraph -->
@@ -14,7 +22,7 @@
 
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
     <!-- wp:heading {"level":3,"className":"is-style-default"} -->
-    <?php $wardSlug = strtolower(str_replace(' ', '-', $wardName)); ?>
+    <?php $wardSlug = sluggify($wardName); ?>
     <h3 class="wp-block-heading is-style-default" id="<?php echo $wardSlug; ?>"><a style="text-decoration: none;" href="#<?php echo $wardSlug; ?>"><?php echo $wardName; ?></a></h3>
     <!-- /wp:heading -->
 
