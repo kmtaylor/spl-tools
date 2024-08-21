@@ -1,0 +1,10 @@
+{
+    "map.jpg": {
+        "id": 123,
+        "url": "http://localhost/map.png"
+    },
+    "default.png": {
+        "id": 987,
+        "url": "http://localhost/default.png"
+    }
+}

@@ -6,7 +6,7 @@
             "type": "php",
             "request": "launch",
             "program": "${workspaceFolder}/main.php",
-            "args": ["--council-file", "${workspaceFolder}/example-config.json", "--candidates-file", "${workspaceFolder}/example-candidates.csv"],
+            "args": ["--council-file", "${workspaceFolder}/example-config.json", "--candidates-file", "${workspaceFolder}/example-candidates.csv", "--media-file", "${workspaceFolder}/example-media.json"],
             "cwd": "${workspaceFolder}",
             "port": 9000
         }
