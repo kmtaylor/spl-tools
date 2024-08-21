@@ -20,6 +20,22 @@ function sluggify($input) {
 <!-- /wp:image -->
  <?php endif ?>
 
+ <?php 
+ 
+ $wardCount = count($config['wardNames']);
+
+ if ($wardCount > 1) {
+    $wardsDescription = $config['councilName'] . " is divided into " . $wardCount . " wards:";
+ } else {
+    $wardsDescription = $config['councilName'] . " is unsubdivided and does not contain any wards.";
+ }
+
+ ?>
+
+ <!-- wp:paragraph -->
+<p><?php echo $wardsDescription; ?></p>
+<!-- /wp:paragraph -->
+
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
     <!-- wp:heading {"level":3,"className":"is-style-default"} -->
     <?php $wardSlug = sluggify($wardName); ?>
