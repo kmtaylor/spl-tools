@@ -36,6 +36,12 @@ function sluggify($input) {
 <p><?php echo $wardsDescription; ?></p>
 <!-- /wp:paragraph -->
 
+<?php if (isset($media["map.jpg"])): ?>
+<!-- wp:image {"id":<?php echo $media["map.jpg"]['id']; ?>,"width":"550px","sizeSlug":"full","linkDestination":"media","className":"is-style-default"} -->
+<figure class="wp-block-image size-full is-resized is-style-default"><a href="<?php echo $media["map.jpg"]['url']; ?>" target="_blank" rel="noreferrer noopener"><img src="<?php echo $media["map.jpg"]['url']; ?>" alt="" class="wp-image-<?php echo $media["map.jpg"]['id']; ?>" style="width:550px"/></a></figure>
+<!-- /wp:image -->
+<?php endif ?>
+
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
     <!-- wp:heading {"level":3,"className":"is-style-default"} -->
     <?php $wardSlug = sluggify($wardName); ?>
