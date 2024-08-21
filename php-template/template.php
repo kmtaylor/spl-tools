@@ -55,8 +55,8 @@ function sluggify($input) {
     $wardChunks = array_chunk($config['wardNames'], $wardListChunkSize);
 
     ?>
-    <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
-    <div class="wp-block-columns">
+    <!-- wp:columns {"className":"ward-list-columns"} -->
+    <div class="wp-block-columns ward-list-columns">
 
     <?php for ($columnIdx = 0; $columnIdx < 4; $columnIdx++): ?>
         <!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
