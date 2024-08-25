@@ -15,16 +15,16 @@ wp package install wp-cli/restful $WP_FLAGS
 
 if test -d "$path"; then
   echo "Found $path, starting upload."
-  for file in "$path"/*.jpg; do
+  for file in "$path"/*/*.jpg; do
     ./upload-media.sh "$file"
   done
-  for file in "$path"/*.jpeg; do
+  for file in "$path"/*/*.jpeg; do
     ./upload-media.sh "$file"
   done
-  for file in "$path"/*.png; do
+  for file in "$path"/*/*.png; do
     ./upload-media.sh "$file"
   done
-  for file in "$path"/*.gif; do
+  for file in "$path"/*/*.gif; do
     ./upload-media.sh "$file"
   done
 else
