@@ -82,7 +82,10 @@ function sluggify($input) {
 
     </div>
     <!-- /wp:columns -->
-
+<?php else: ?>
+    <!-- wp:paragraph -->
+    <p></p>
+    <!-- /wp:paragraph -->
 <?php endif; ?>
 
 <?php foreach ($config['wardNames'] as $index => $wardName): ?>
