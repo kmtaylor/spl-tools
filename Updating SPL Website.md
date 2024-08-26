@@ -2,7 +2,7 @@
 
 1) Download any candidate pictures provided by volunteer to the appropriate council folder in the `spl-data` repo
 1) Ensure that the file name of each picture contains the candidate's full name (eg. for a candidate named `Joe Bloggs`, the file could be named `JoeBloggs.jpg` or `WardName_Joe_Bloggs.png`, etc)
-1) Resize the pictures to 200px x 200px
+1) Resize the pictures to 400px x 400px
 1) Commit the pictures to the `spl-data` repo
 1) Download CSV provided by a volunteer containing the candidate scores
 1) Normalise the CSV using the "CSV Normaliser" tool (eg. `php csv-normaliser/main.php --input ~/Downloads/COUNCIL_NAME.csv --media ../spl-data/council-name --output ../spl-data/council-name/candidates.csv`)
