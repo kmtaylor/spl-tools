@@ -52,13 +52,13 @@ if (($handle = fopen($inputFile, "r")) !== FALSE) {
                 $currentWard = "Coastal-Promontory";
             }
         }
-        if ($data[0] == "Candidate") {
+        if ($data[0] == "Candidate" || $data[0] == "") {
             if ($currentWard == null) {
                 error_log("No ward found, skipping data on line " . $currentLine);
                 continue;
             }
 
-            $candidateName = $data[1];
+            $candidateName = trim($data[1]);
 
             if ($candidateName == " example name") {
                 error_log("Skipping line ". $currentLine);
@@ -89,12 +89,17 @@ if (($handle = fopen($inputFile, "r")) !== FALSE) {
                 print("Failed to identify picture for " . $candidateName . "\n");
             }
 
+            $rating = $data[2];
+            if ($rating == "score" || $rating == "") {
+                $rating = 0;
+            }
+
             array_push(
                 $candidates, 
                 [
                     "Ward" => $currentWard,
                     "Candidate Name" => $candidateName,
-                    "Rating" => $data[2],
+                    "Rating" => $rating,
                     "Picture" => $picture
                 ]
             );
