@@ -1,5 +1,27 @@
 <?php
-$options = getopt("", ["input:", "output:", "media:"]);
+$options = getopt("", ["folder:", "input:", "output:", "media:"]);
+
+if (isset($options['folder'])) {
+    $folder = $options['folder'];
+    if (is_dir($folder)) {
+        $lastpart = basename($folder);
+        if (!isset($options['input'])) {
+            $potentialInputFile = $folder . DIRECTORY_SEPARATOR  . strtoupper($lastpart) . ".csv";
+            if (is_file($potentialInputFile)) {
+                $options['input'] = $potentialInputFile;
+            }
+        }
+        if (!isset($options['output'])) {
+            $options['output'] = $folder . DIRECTORY_SEPARATOR . "candidates.csv";
+        }
+        if (!isset($options['media'])) {
+            $options['media'] = $folder;
+        }
+    } else {
+        error_log("Error: Specified folder is not valid.");
+        exit(1);
+    }
+}
 
 if (isset($options['input'])) {
     $inputFile = $options['input'];
