@@ -103,7 +103,7 @@ function sluggify($input) {
         if ($a == $b) {
             return 0;
         }
-        return (((int) $a) < ((int) $b)) ? 1 : -1;
+        return (((int) $a['Rating']) < ((int) $b['Rating'])) ? 1 : -1;
     });
 
     if (count($wardCandidates) > 0):
