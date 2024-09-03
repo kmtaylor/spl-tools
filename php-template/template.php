@@ -88,31 +88,41 @@ function sluggify($input) {
     <!-- /wp:paragraph -->
 <?php endif; ?>
 
-<?php foreach ($config['wardNames'] as $index => $wardName): ?>
+<?php 
+    if (isset($config['groupNames'])) {
+        $groupNames = $config['groupNames'];
+        $propertyOnCandidate = 'Group';
+    } else {
+        $groupNames = $config['wardNames'];
+        $propertyOnCandidate = 'Ward';
+    }
+?>
+
+<?php foreach ($groupNames as $index => $groupName): ?>
     <!-- wp:heading {"level":3,"className":"is-style-default"} -->
-    <?php $wardSlug = sluggify($wardName); ?>
-    <h3 class="wp-block-heading is-style-default" id="<?php echo $wardSlug; ?>"><a style="text-decoration: none;" href="#<?php echo $wardSlug; ?>"><?php echo $wardName; ?></a></h3>
+    <?php $groupSlug = sluggify($groupName); ?>
+    <h3 class="wp-block-heading is-style-default" id="<?php echo $groupSlug; ?>"><a style="text-decoration: none;" href="#<?php echo $groupSlug; ?>"><?php echo htmlspecialchars($groupName); ?></a></h3>
     <!-- /wp:heading -->
 
     <?php
-    $wardCandidates = array_filter($candidates, function ($candidate) use ($wardName) {
-        return isset($candidate["Ward"]) && $candidate["Ward"] === $wardName;
+    $groupCandidates = array_filter($candidates, function ($candidate) use ($groupName, $propertyOnCandidate) {
+        return isset($candidate[$propertyOnCandidate]) && $candidate[$propertyOnCandidate] === $groupName;
     });
 
-    usort($wardCandidates, function($a, $b) {
+    usort($groupCandidates, function($a, $b) {
         if ($a == $b) {
             return 0;
         }
         return (((int) $a['Rating']) < ((int) $b['Rating'])) ? 1 : -1;
     });
 
-    if (count($wardCandidates) > 0):
+    if (count($groupCandidates) > 0):
     ?>
 
         <?php
         $columnCount = 4;
 
-        $chunkedWardCandidates = array_chunk($wardCandidates, $columnCount);
+        $chunkedWardCandidates = array_chunk($groupCandidates, $columnCount);
         ?>
 
         <?php foreach($chunkedWardCandidates as $chunk): ?>
@@ -151,7 +161,7 @@ function sluggify($input) {
                             <!-- /wp:image -->
 
                             <!-- wp:heading {"textAlign":"center","className":"wp-block-heading has-text-align-center has-medium-font-size","style":{"spacing":{"margin":{"top":"1rem","bottom":"0.5rem"}}}} -->
-                            <h2 class="wp-block-heading has-text-align-center has-medium-font-size" style="margin-top:1rem;margin-bottom:0.5rem"><strong><?php echo $candidate['Candidate Name']; ?></strong></h2>
+                            <h2 class="wp-block-heading has-text-align-center has-medium-font-size" style="margin-top:1rem;margin-bottom:0.5rem"><strong><?php echo htmlspecialchars($candidate['Candidate Name']); ?></strong></h2>
                             <!-- /wp:heading -->
 
                             <!-- wp:paragraph {"align":"center","style":{"layout":{"selfStretch":"fit","flexSize":null},"typography":{"lineHeight":"1"},"spacing":{"margin":{"top":"0.5rem","bottom":"1.5rem"}}},"fontSize":"large"} -->
