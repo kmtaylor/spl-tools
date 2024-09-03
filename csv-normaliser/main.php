@@ -82,7 +82,7 @@ if (($handle = fopen($inputFile, "r")) !== FALSE) {
 
             $candidateName = trim($data[1]);
 
-            if ($candidateName == " example name") {
+            if ($candidateName == "example name") {
                 error_log("Skipping line ". $currentLine);
                 continue;
             }
