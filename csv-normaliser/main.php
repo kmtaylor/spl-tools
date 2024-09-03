@@ -108,7 +108,7 @@ if (($handle = fopen($inputFile, "r")) !== FALSE) {
                 }
             }
             if ($picture === "") {
-                print("Failed to identify picture for " . $candidateName . "\n");
+                print("\033[31mFailed to identify picture for " . $candidateName . "\033[0m\n");
             }
 
             $rating = $data[2];
