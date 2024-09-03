@@ -117,6 +117,7 @@ if (($handle = fopen($inputFile, "r")) !== FALSE) {
             if ($rating == "score" || $rating == "") {
                 $rating = 0;
             }
+            $rating = (int)$rating;
 
             array_push(
                 $candidates, 
