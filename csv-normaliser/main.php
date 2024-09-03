@@ -166,6 +166,6 @@ if (($handle = fopen($outputFile, "w")) !== FALSE) {
     exit(1);
 }
 
-print("Data written to " . $outputFile);
+print("Data written to " . $outputFile . "\n");
 
 exit(0);
