@@ -93,7 +93,7 @@ if (($handle = fopen($inputFile, "r")) !== FALSE) {
 
             //print("Adding candidate " . $candidateName . " to ". $currentWard . "\n");
 
-            $name_split = explode(" ", $data[1]);
+            $name_split = explode(" ", str_replace("'", "_", $data[1]));
 
             $name_patterns = [
                 implode(".*", $name_split),
