@@ -4,13 +4,15 @@ $options = getopt("", ["folder:", "input:", "output:", "media:"]);
 if (isset($options['folder'])) {
     $folder = $options['folder'];
     if (is_dir($folder)) {
-        $expectedInputFileName = str_replace("-", " ", strtoupper(basename($folder))) . ".csv";
+        $expectedInputFileNames = [];
+        $expectedInputFileNames[] = str_replace("-", " ", strtoupper(basename($folder))) . ".csv";
+        $expectedInputFileNames[] = strtoupper(basename($folder)) . ".csv";
         if (!isset($options['input'])) {
-            $expectedInputFile = $folder . DIRECTORY_SEPARATOR  . $expectedInputFileName;
-            if (is_file($expectedInputFile)) {
-                $options['input'] = $expectedInputFile;
-            } else {
-                error_log("Couldn't find " . $expectedInputFile . "\n");
+            foreach ($expectedInputFileNames as $expectedInputFileName) {
+                $expectedInputFile = $folder . DIRECTORY_SEPARATOR  . $expectedInputFileName;
+                if (is_file($expectedInputFile)) {
+                    $options['input'] = $expectedInputFile;
+                }
             }
         }
         if (!isset($options['output'])) {
