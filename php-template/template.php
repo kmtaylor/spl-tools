@@ -4,6 +4,11 @@ function sluggify($input) {
     return strtolower(str_replace(' ', '-', $input));
 }
 
+$surveyLink = "<a href=\"https://forms.gle/gnDNyBiVC64tDo2Y7\">Streets People Love Pledge and Survey</a>";
+if (isset($config["survey"])) {
+    $surveyLink = $config["survey"];
+}
+
 ?>
 
 <!-- wp:paragraph -->
@@ -11,7 +16,7 @@ function sluggify($input) {
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Have candidates in your local government area not yet taken part? Send your local candidates the <a href="https://forms.gle/gnDNyBiVC64tDo2Y7">Streets People Love Pledge and Survey</a> and ask them to complete it so that local residents can vote for the candidates who want to build the streets people love.</p>
+<p>Have candidates in your local government area not yet taken part? Send your local candidates the <?php echo $surveyLink; ?> and ask them to complete it so that local residents can vote for the candidates who want to build the streets people love.</p>
 <!-- /wp:paragraph -->
 
 <?php if (isset($media["header.jpg"])): ?>
@@ -180,7 +185,7 @@ function sluggify($input) {
     <?php else: ?>
 
         <!-- wp:paragraph -->
-        <p>No candidates in this ward have completed the Streets People Love survey. Send your local candidates the <a href="https://forms.gle/gnDNyBiVC64tDo2Y7">Streets People Love Pledge and Survey</a> and ask them to take part so that local residents can vote for the candidates who want to build the streets people love.</p>
+        <p>No candidates in this ward have completed the survey. Send your local candidates the <?php echo $surveyLink; ?> and ask them to take part so that local residents can vote for the candidates who want to build the streets people love.</p>
         <!-- /wp:paragraph -->
 
     <?php endif; ?>
