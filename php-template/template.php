@@ -149,7 +149,6 @@ if (isset($config["survey"])) {
                                 }
 
                                 $candidate_rating = str_repeat("✔️", max(0, min(5, $candidate['Rating'])));
-                                $candidate_rating_colour = "green";
 
                                 // If string is 5 ticks, insert a zero width space entity between the 3rd and 4th ticks so that it wraps nicer
                                 if ($candidate_rating == "✔️✔️✔️✔️✔️") {
@@ -170,7 +169,7 @@ if (isset($config["survey"])) {
                             <!-- /wp:heading -->
 
                             <!-- wp:paragraph {"align":"center","style":{"layout":{"selfStretch":"fit","flexSize":null},"typography":{"lineHeight":"1"},"spacing":{"margin":{"top":"0.5rem","bottom":"1.5rem"}}},"fontSize":"large"} -->
-                            <p class="has-text-align-center has-large-font-size" style="margin-top:0.5rem;margin-bottom:1.5rem;line-height:1;color: rgba(100%, 0%, 0%, 0);text-shadow: 0 0 0 <?php echo $candidate_rating_colour; ?>;"><?php echo $candidate_rating; ?></p>
+                            <p class="has-text-align-center has-large-font-size candidate-ticks"><?php echo $candidate_rating; ?></p>
                             <!-- /wp:paragraph -->
                         <?php endif; ?>
 
