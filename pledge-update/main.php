@@ -19,7 +19,7 @@ foreach ($files as $key => $file) {
     if ($config_string !== FALSE) {
         $config = json_decode($config_string, true);
     } else {
-        error_log('Error opening config.json');
+        error_log("Error opening config.json.");
         exit(1);
     }
 
@@ -32,6 +32,7 @@ foreach ($files as $key => $file) {
                 $candidate[$value] = $data[$key];
             }
             $candidate['Council'] = $config['councilName'];
+            $candidate['Path'] = dirname($file);
             $candidateData[] = $candidate;
         }
         fclose($handle);
@@ -41,10 +42,39 @@ foreach ($files as $key => $file) {
     }
 }
 
+/* Select people who have taken the pledge */
 $pledgeCandidates = array_filter($candidateData, function ($candidate) {
     return $candidate['Pledge'] === 'y';
 });
 
-print_r($pledgeCandidates);
+/* Select 9 random candidates */
+$pledgeKeys = array_rand($pledgeCandidates, 9);
+shuffle($pledgeKeys);
+
+$i = 0;
+foreach ($pledgeKeys as $key) {
+    $media_desc = $pledgeCandidates[$key]['Path']."/".
+                    $pledgeCandidates[$key]['Picture'].".json";
+    $media_string = file_get_contents($media_desc);
+
+    if ($media_string !== FALSE) {
+        $media = json_decode($media_string, true);
+    } else {
+        error_log("Error opening image descriptor.");
+        exit(1);
+    }
+
+    $image_url = $media['url'];
+
+    echo "s|pledge_img_".$i."|".$image_url."|\n";
+
+    echo "s|pledge_string_".$i."|";
+    echo $pledgeCandidates[$key]['Candidate Name'].
+        " (".
+        $pledgeCandidates[$key]['Council'].
+        ") has taken the pledge!|\n";
+
+    $i++;
+}
 
 exit(0);
